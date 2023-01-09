@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style1.css">
+    <script src="script.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');
     </style>
@@ -35,14 +36,44 @@
                     <img class="down-arrow" src="assets/arrow-down.png" alt="arrow-down">
                 </div>
             </div>
-            <div class="div-type-documents">
-                <img class="icon-type-documents" src="assets/icon-ppt.png" alt="icon power point">
-                <p class="text-type-document">Power point</p>
-            </div> 
-            <div class="div-type-documents">
-                <img class="icon-type-documents" src="assets/icon-ppt.png" alt="icon power point">
-                <p class="text-type-document">Power point</p>
-            </div>   
+            <div class="type-of-documents">
+                <div class="div-type-documents">
+                    <img class="icon-type-documents" src="assets/icon-ppt.png" alt="icon power point">
+                    <p class="text-type-document">POWER POINT</p>
+                </div> 
+                <div class="div-type-documents">
+                    <img class="icon-type-documents" src="assets/icon-word.png" alt="icon power point">
+                    <p class="text-type-document">WORD</p>
+                </div>  
+                <div class="div-type-documents">
+                    <img class="icon-type-documents" src="assets/icon-csv.png" alt="icon power point">
+                    <p class="text-type-document">CSV</p>
+                </div>  
+                <div class="div-type-documents">
+                    <img class="icon-type-documents" src="assets/icon-odt.png" alt="icon power point">
+                    <p class="text-type-document">ODT</p>
+                </div>  
+                <div class="div-type-documents">
+                    <img class="icon-type-documents" src="assets/icon-pptt.png" alt="icon power point">
+                    <p class="text-type-document">PPT</p>
+                </div>  
+                <div class="div-type-documents">
+                    <img class="icon-type-documents" src="assets/icon-txt.png" alt="icon power point">
+                    <p class="text-type-document">TXT</p>
+                </div>  
+                <div class="div-type-documents">
+                    <img class="icon-type-documents" src="assets/icon-exe.png" alt="icon power point">
+                    <p class="text-type-document">EXE</p>
+                </div> 
+                <div class="div-type-documents">
+                    <img class="icon-type-documents" src="assets/icon-zip.png" alt="icon power point">
+                    <p class="text-type-document">ZIP</p>
+                </div> 
+                <div class="div-type-documents">
+                    <img class="icon-type-documents" src="assets/icon-rar.png" alt="icon power point">
+                    <p class="text-type-document">RAR</p>
+                </div> 
+            </div>
             <div class="div-type-sidebar">
                 <img class="icon-type" src="assets/icon-images.png" alt="icon images">
                 <h2 class="h2-title-sidebar">Images</h2>
