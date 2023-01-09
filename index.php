@@ -29,11 +29,12 @@
                     <h2>Create</h2>
                 </div>
             </div>
-            <div class="div-type-sidebar div-type-sidebar1">
+            <div class="div-type-sidebar div-type-sidebar1 div-document">
                 <img class="icon-type" src="assets/icon-documents.png" alt="icon document">
                 <h2 class="h2-title-sidebar">Documents</h2>
                 <div class="div-down-arrow">
                     <img class="down-arrow" src="assets/arrow-down.png" alt="arrow-down">
+                    <img class="down-arrow up-arrow" src="assets/icon-arrow-up.png" alt="arrow-down">
                 </div>
             </div>
             <div class="type-of-documents">
@@ -74,11 +75,25 @@
                     <p class="text-type-document">RAR</p>
                 </div> 
             </div>
-            <div class="div-type-sidebar">
+            <div class="div-type-sidebar div-images">
                 <img class="icon-type" src="assets/icon-images.png" alt="icon images">
                 <h2 class="h2-title-sidebar">Images</h2>
                 <div class="div-down-arrow">
                     <img class="down-arrow" src="assets/arrow-down.png" alt="arrow-down">
+                </div> 
+            </div>
+            <div class="type-of-images">
+                <div class="div-type-images">
+                    <img class="icon-type-documents" src="assets/icon-jpg.png" alt="icon power point">
+                    <p class="text-type-document">JPG</p>
+                </div> 
+                <div class="div-type-images">
+                    <img class="icon-type-documents" src="assets/icon-png.png" alt="icon power point">
+                    <p class="text-type-document">PNG</p>
+                </div> 
+                <div class="div-type-images">
+                    <img class="icon-type-documents" src="assets/icon-jpg.png" alt="icon power point">
+                    <p class="text-type-document">SVG</p>
                 </div> 
             </div>
             <div class="div-type-sidebar">
