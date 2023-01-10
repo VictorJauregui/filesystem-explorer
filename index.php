@@ -26,7 +26,7 @@
             <div class="div-btn-create">
                 <div class="btn-create">
                     <img src="assets/icon-create.png" alt="create icon">
-                    <h2>Create</h2>
+                    <h2>Update</h2>
                 </div>
             </div>
             <div class="div-type-sidebar div-type-sidebar1 div-document">
