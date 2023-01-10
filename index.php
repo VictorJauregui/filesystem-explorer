@@ -24,6 +24,7 @@
             </div>
             <div class="type-of-update">
                 <div class="card-type-update card-directory">
+                    
                     <div class="div-icon-type-update">
                         <img class="icon-type-update" src="assets/icon-directory.png" alt="icon-directory">
                     </div>
@@ -31,7 +32,13 @@
                 </div>
                 <div class="card-type-update">
                     <div class="div-icon-type-update">
-                        <img class="icon-type-update" src="assets/icon-file.png" alt="icon-directory">
+                        <img class="icon-type-update" src="assets/icon-file.png" alt="icon-directory" >
+                        <form action="upload.php" method="POST" enctype="multipart/form-data" >
+                        <label for="Upload">
+                        <input id="input" type="file" name="Upload">
+                        <input   type="submit" value="upload" >
+                        </label>
+                    </form>
                     </div>
                     <p>FILE</p>
                 </div>
@@ -68,7 +75,7 @@
             <div class="div-btn-create">
                 <div class="btn-create">
                     <img src="assets/icon-create.png" alt="create icon">
-                    <h2>Create</h2>
+                    <h2></h2>
                 </div>
             </div>
             <div class="all-sidebar-documents">
