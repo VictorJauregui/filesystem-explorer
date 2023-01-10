@@ -44,3 +44,5 @@ function openImages(){
         typeOfImages.style.marginRight = "0px";
     }
 }
+const input=document.querySelector("#input")
+const enviar=document.querySelector(".inpu")

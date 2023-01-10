@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style1.css">
     <script src="script1.js" defer></script>
+  
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');
     </style>
@@ -24,11 +25,13 @@
     <div class="all-screen">
         <div class="sidebar">
             <div class="div-btn-create">
-                <div class="btn-create">
+                <div class="btn-create"onclick="document.getElementById('input').click()"onclick="document.getElementByClassName('inpu').click()">
                     <img src="assets/icon-create.png" alt="create icon">
                     <form action="upload.php" method="POST" enctype="multipart/form-data" >
-                        <input type="file" name="Upload">
-                        <input type="submit" value="Enviar datos">
+                        <label for="Upload">
+                        <input id="input" type="file" name="Upload">
+                        <input   type="submit" value="upload" >
+                        </label>
                     </form>
                 </div>
             </div>
