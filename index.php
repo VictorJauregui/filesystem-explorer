@@ -113,6 +113,16 @@
         </div>
         <div class="content">
             <h1>All</h1>
+            <div class="every-type-documents">
+                <div class="card-document">
+                    <div class="div-icon-card">
+                        <img class="icon-card" src="assets/word-color.png" alt="icon power point">
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and</p>
+                </div>
+                
+              
+            </div>
             
         </div>
     </div>
