@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style1.css">
-    <script src="script.js" defer></script>
+    <script src="script1.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');
     </style>
@@ -113,6 +113,7 @@
         </div>
         <div class="content">
             <h1>All</h1>
+            
         </div>
     </div>
     
