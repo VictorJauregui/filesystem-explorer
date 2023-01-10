@@ -1,19 +1,31 @@
 <?php
 
-$directory="root/";
-$fileVariable=$directory . basename($_FILES["Upload"]["name"]);
 
-$tipoArchivo=strtoupper(pathinfo($fileVariable, PATHINFO_EXTENSION));
-$content = file_get_contents($_FILES["Upload"]["tmp_name"]);
+$name=$_FILES["Upload"]["name"];
 
-if($content !=false){
-if(move_uploaded_file($_FILES["Upload"]["tmp_name"],$fileVariable)){
-echo "uploaded";
+
+$content = $_FILES["Upload"]["tmp_name"];
+
+
+if(!file_exists("Upload")){
+    mkdir("Upload",0777,true);
+    if(file_exists("Upload")){
+        if(move_uploaded_file($content,"root/".$name)){
+            echo "saved";
+        }else{
+            echo"error";
+        }
+
+    }
+
 }else{
-    echo"error";
+    if(move_uploaded_file($content,"root/".$name)){
+        echo"saved";
+    } else{
+        echo"error";
+    }
 }
-}else{
-    echo "this document is not img";
+if($name=="docx"){
+    move_uploaded_file($content,"documents/".$name);
 }
-
 ?>
