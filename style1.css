@@ -43,7 +43,8 @@ body{
     height: 3rem;
     border-radius: 5px;
     font-size: 30px;
-    color: #3EBCFE;
+    color: #5B5B5B;
+    padding: 0 10px;
 }
 
 .all-screen {
@@ -99,7 +100,6 @@ body{
     display: flex;
     justify-content: center;
 }
-
 
 .btn-create img {
     width: 30px;
@@ -179,6 +179,15 @@ body{
     align-items: center;
     margin-left: 50px;
 }
+
+.div-type-images:hover {
+    border: 1px solid #5B5B5B;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
 
 .type-of-images{
     display: none;
