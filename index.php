@@ -26,7 +26,10 @@
             <div class="div-btn-create">
                 <div class="btn-create">
                     <img src="assets/icon-create.png" alt="create icon">
-                    <h2>Create</h2>
+                    <form action="upload.php" method="POST" enctype="multipart/form-data" >
+                        <input type="file" name="Upload">
+                        <input type="submit" value="Enviar datos">
+                    </form>
                 </div>
             </div>
             <div class="div-type-sidebar div-type-sidebar1 div-document">
