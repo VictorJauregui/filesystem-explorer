@@ -30,21 +30,26 @@
                     </div>
                     <p>DIRECTORY</p>
                 </div>
-                <div class="card-type-update">
-                    <div class="div-icon-type-update">
-                        <img class="icon-type-update" src="assets/icon-file.png" alt="icon-directory" >
+                <label for="div-icon-type-update">
+                <div class="card-type-update" >
+                    <div class="div-icon-type-update"onclick="document.getElementById('input').click()">
+                        <img class="icon-type-update" src="assets/icon-file.png" alt="icon-directory" class="btn-create" >
                         <form action="upload.php" method="POST" enctype="multipart/form-data" >
-                        <label for="Upload">
-                        <input id="input" type="file" name="Upload">
-                        <input   type="submit" value="upload" >
-                        </label>
-                    </form>
-                    </div>
-                    <p>FILE</p>
+                        <input id="input" type="file" name="Upload" >
+                        
+                    </label>
                 </div>
+                <p>FILE</p>
+                <input   type="submit" value="upload" >
+                </form>
+                    <div>
+                        </div>
             </div>
+            
+          
         </div>
     </div>
+</div>
     <div class="modal2">
         <div class="contenido-modal2">
             <div class="div-icon-close close-modal2">

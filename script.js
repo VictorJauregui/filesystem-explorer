@@ -44,3 +44,12 @@ function openImages(){
         typeOfImages.style.marginRight = "0px";
     }
 }
+const cargar=document.querySelector("#input")
+const enviar=document.querySelector(".inpu")
+const recuadro=document.querySelector(".card-type-update")
+
+recuadro.addEventListener("click",seleccionarEnviar);
+function seleccionarEnviar(){
+
+}
+
