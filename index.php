@@ -13,6 +13,7 @@
     <title>System Explorer</title>
 </head>
 <body>
+
     <!-------------------MODAL---------------------> 
     <div class="modal">
         <div class="contenido-modal">
@@ -62,6 +63,16 @@
             
         </div>
     </div>
+    <?php
+        if(isset($_GET["createsuccesfully"])){
+            echo "<div class='modal-succesfully'>
+                <div class='div-succesfully'>
+                    <img class='icon-succesfully' src='assets/check.png' alt='succesfully'>
+                    <p>Your directory has been created succesfully</p>
+                <div>
+            </div>";
+        }
+    ?>
    <!-------------------DASHBOARD---------------------> 
     </div>
     <div class="nav-bar">
