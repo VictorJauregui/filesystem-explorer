@@ -4,7 +4,7 @@ $name= $_FILES["file-upload"]["name"];
 $content = $_FILES["file-upload"]["tmp_name"];
 
 
-function images(){}
+
 
 if (strpos($name, 'jpeg') || strpos($name, 'pptx') === true) {
     echo "true";
