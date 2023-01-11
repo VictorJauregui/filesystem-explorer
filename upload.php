@@ -26,7 +26,7 @@ if(!file_exists("Upload")){
         echo"error";
     }
 }
-if($name=="docx"){
-    move_uploaded_file($content,"documents/".$name);
+if($name="docx"){
+    move_uploaded_file($content,"root/documents/".$name);
 }
 ?>

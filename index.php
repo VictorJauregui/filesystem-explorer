@@ -31,7 +31,7 @@
                     <p>DIRECTORY</p>
                 </div>
                 <label for="div-icon-type-update">
-                <div class="card-type-update" >
+                <div class="card-type-update correct" >
                     <div class="div-icon-type-update"onclick="document.getElementById('input').click()">
                         <img class="icon-type-update" src="assets/icon-file.png" alt="icon-directory" class="btn-create" >
                         <form action="upload.php" method="POST" enctype="multipart/form-data" >
@@ -39,8 +39,8 @@
                         
                     </label>
                 </div>
-                <p>FILE</p>
                 <input   type="submit" value="upload" >
+                
                 </form>
                     <div>
                         </div>
@@ -80,7 +80,7 @@
             <div class="div-btn-create">
                 <div class="btn-create">
                     <img src="assets/icon-create.png" alt="create icon">
-                    <h2></h2>
+                    <h2>upload</h2>
                 </div>
             </div>
             <div class="all-sidebar-documents">

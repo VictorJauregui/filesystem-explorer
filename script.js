@@ -44,12 +44,19 @@ function openImages(){
         typeOfImages.style.marginRight = "0px";
     }
 }
-const cargar=document.querySelector("#input")
-const enviar=document.querySelector(".inpu")
-const recuadro=document.querySelector(".card-type-update")
 
-recuadro.addEventListener("click",seleccionarEnviar);
-function seleccionarEnviar(){
 
-}
 
+
+const newDirectory=document.querySelector(".button-primary");
+const sidebar=document.querySelector(".sidebar");
+const todo=document.querySelector(".all-screen");
+
+
+newDirectory.addEventListener("click",directoryCreate);
+function directoryCreate(){
+    const newElement = document.createElement("div");
+    newElement.classList.add("card-document");
+    newElement.textContent = "soy un div creado con javascript";
+    todo.appendChild(newElement);
+  };
