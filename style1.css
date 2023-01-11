@@ -267,7 +267,7 @@ body{
 
 .contenido-modal{
     width: 35%;
-  height: 350px;
+  height: 400px;
   margin-top: 250px;
   background-color: white;
   border-radius: 20px;
@@ -475,4 +475,31 @@ body{
 .icon-close-right-part{
     margin-right: 20px;
     margin-bottom: 50px;
+}
+
+
+.form-disable-file{
+    display: none;
+}
+
+.form-disable-file-show{
+    width: 100%;
+}
+
+.form-disable-file-show button{
+    margin-top: 10px;
+    background-color: white;
+    color: #8BD5FF;
+    cursor: pointer;
+    border: transparent;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    height: 2rem;
+}
+
+.form-disable-file-show button:hover{
+    border: 1px solid #999;
+    box-shadow: 2px 2px 5px #999;;
+
 }

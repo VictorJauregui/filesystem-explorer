@@ -21,7 +21,9 @@ const rightPart = document.querySelector(".content-individual-document");
 const sidebar = document.querySelector(".sidebar")
 const iconCard = document.querySelector(".icon-card");
 const xCloseRightPart = document.querySelector(".icon-close-right-part");
-const allCards = document.querySelector(".every-type-documents")
+const allCards = document.querySelector(".every-type-documents");
+const cardFile = document.querySelector(".card-file");
+const formDisable = document.querySelector(".form-disable-file")
 
 xClose2.addEventListener("click", closeWindows2);
 documents.addEventListener("click", openDocuments);
@@ -31,7 +33,8 @@ buttonCreate.addEventListener("click", create);
 xClose.addEventListener("click", closeWindows);
 createDirectory.addEventListener("click", directoryCreate);
 card.addEventListener("click", openCard);
-xCloseRightPart.addEventListener("click", closeRightPart)
+xCloseRightPart.addEventListener("click", closeRightPart);
+cardFile.addEventListener("click", openFile);
 
 
 function openDocuments(){
@@ -128,3 +131,15 @@ function closeRightPart(){
         allCards.style.gridTemplateColumns = "20% 20% 20% 20% 20%"
     }
 }
+
+function openFile(){
+    console.log("hola")
+    if(formDisable.classList.contains("form-disable-file")){
+        setInterval(() => {
+            formDisable.classList.replace("form-disable-file", "form-disable-file-show")
+        }, 1000);
+        
+
+    }
+}
+

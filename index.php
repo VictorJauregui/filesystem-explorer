@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <script src="script1.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');
@@ -29,11 +29,17 @@
                     </div>
                     <p>DIRECTORY</p>
                 </div>
-                <div class="card-type-update">
-                    <div class="div-icon-type-update">
-                        <img class="icon-type-update" src="assets/icon-file.png" alt="icon-directory">
-                    </div>
-                    <p>FILE</p>
+                <div class="card-type-update card-file">
+                        <label for="file-upload" style="cursor: pointer;">
+                            <div class="div-icon-type-update" >
+                                <img class="icon-type-update" src="assets/icon-file.png" alt="icon-directory">
+                            </div>
+                            <p>FILE</p>
+                        </label>
+                    <form class="form-disable-file" action="file.php" method="POST" enctype="multipart/form-data">
+                        <input class="input-file-disable" id="file-upload" type="file" name="file-upload"> 
+                        <button type="submit" name="uploadBtn">UPLOAD</button>   
+                    </form>     
                 </div>
             </div>
         </div>
