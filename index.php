@@ -52,11 +52,14 @@
             <div class="top-contenido-modal2">
                 <h2 class="h2-modal2">NAME OF DIRECTORY</h2>
             </div>
-            <input class="input-directory" type="text">
-            <div class="buttons-modal2">
-                <button class="button-secundary">BACK</button>
-                <button class="button-primary">CREATE</button>
-            </div>
+            <form action="create-directory.php" method="GET">
+                <input class="input-directory" type="text" name="name-directory">
+                <div class="buttons-modal2">
+                    <button class="button-secundary">BACK</button>
+                    <button type="submit" class="button-primary">CREATE</button>
+                </div>
+            </form>
+            
         </div>
     </div>
    <!-------------------DASHBOARD---------------------> 

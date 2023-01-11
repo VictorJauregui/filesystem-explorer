@@ -1,34 +1,29 @@
 <?php
 
-print_r($_FILES);
-
 $name= $_FILES["file-upload"]["name"];
 $content = $_FILES["file-upload"]["tmp_name"];
-$btn = $_REQUEST["uploadBtn"];
 
 
 
 
-if(!file_exists("uploadBtn")){
-    mkdir("uploadBtn",0777,true);
-    if(file_exists("uploadBtn")){
-        if(move_uploaded_file($content,"root/" . $name)){
-            echo "saved";
-        }else{
-            echo "error";
-        }
-    }
+if(move_uploaded_file($content,"root/" .$name)){
+    echo "saved";
 
-} else {
-    if(move_uploaded_file($content,"root/".$name)){
-        echo"saved";
-    } else{
-        echo"error";
-    }
+} else{
+    echo"error";
 }
 
-if($name=="docx"){
-    move_uploaded_file($content,"root/documents/".$name);
+
+if (!file_exists($images)) {
+    mkdir($images, 0777, true);
+    echo "está creada";
+}
+
+if (strpos($name, 'png') !== false) {
+    echo "true";
+    move_uploaded_file($content,"root/images/" .$name);
+
 }
 
 ?>
+
