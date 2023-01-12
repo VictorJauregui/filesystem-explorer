@@ -48,15 +48,50 @@ function openImages(){
 
 
 
-const newDirectory=document.querySelector(".button-primary");
-const sidebar=document.querySelector(".sidebar");
+const newDirectoryBtnn=document.querySelector(".button-primary");//el boton que lo crea
+const sidebar=document.querySelector(".sidebar");//donde quiero que vaaya
 const todo=document.querySelector(".all-screen");
+const directoryNamePut=document.querySelector(".input-directory");//nombre del directorio
+const allDocuments=document.querySelector(".all-sidebar-documents")
+
+newDirectoryBtnn.addEventListener("click",createDirectory);
 
 
-newDirectory.addEventListener("click",directoryCreate);
-function directoryCreate(){
-    const newElement = document.createElement("div");
-    newElement.classList.add("card-document");
-    newElement.textContent = "soy un div creado con javascript";
-    todo.appendChild(newElement);
-  };
+function createDirectory(){
+
+console.log("hola");
+
+const div=document.createElement("div");
+div.classList.add("div-type-sidebar","div-type-sidebar1","div-document");
+allDocuments.appendChild(div);
+
+
+const img = document.createElement("img");
+img.src = ".assets/icon-documents.png";
+img.classList.add("icon-type");
+div.appendChild(img);
+
+const h2=document.createElement("h2");
+h2.classList.add("h2-title-sidebar");
+h2.value=directoryNamePut.value;
+div.appendChild(h2);
+
+const arrow=document.createElement("div");
+arrow.classList.add("div-down-arrow");
+div.appendChild(arrow);
+
+const imgArrow=document.createElement("img");
+imgArrow.src=".assets/arrow-down.png";
+imgArrow.classList("down-arrow");
+arrow.appendChild(imgArrow);
+
+const imgUpArrow=document.createElement("img");
+imgUpArrow.src="assets/icon-arrow-up.png";
+imgUpArrow.classList.add("down-arrow up-arrow");
+arrow.appendChild(imgUpArrow);
+
+
+}
+
+
+//llamar todas las clases i hacer append

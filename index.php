@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script1.js" defer></script>
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');
     </style>
@@ -34,13 +35,31 @@
                 <div class="card-type-update correct" >
                     <div class="div-icon-type-update"onclick="document.getElementById('input').click()">
                         <img class="icon-type-update" src="assets/icon-file.png" alt="icon-directory" class="btn-create" >
-                        <form action="upload.php" method="POST" enctype="multipart/form-data" >
+                        <form action="" method="POST" enctype="multipart/form-data" >
                         <input id="input" type="file" name="Upload" >
-                        
+ 
                     </label>
                 </div>
+                <div>
                 <input   type="submit" value="upload" >
-                
+                                       
+<?php
+session_start();
+
+$name=$_FILES["Upload"]["name"];
+
+
+$content = $_FILES["Upload"]["tmp_name"];
+
+    if(move_uploaded_file($content,"root/".$name)){
+        echo"saved";
+    } else{
+        echo"error";
+    }
+
+
+?>
+</div>
                 </form>
                     <div>
                         </div>
@@ -61,7 +80,7 @@
             <input class="input-directory" type="text">
             <div class="buttons-modal2">
                 <button class="button-secundary">BACK</button>
-                <button class="button-primary">CREATE</button>
+                <button class="button-primary" >CREATE</button>
             </div>
         </div>
     </div>
