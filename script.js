@@ -30,14 +30,14 @@ const formDirectory = document.querySelector("#create-directory-form");
 
 
 xClose2.addEventListener("click", closeWindows2);
-documents.addEventListener("click", openDocuments);
-images.addEventListener("click", openImages);
-audioVideo.addEventListener("click", openAudioVideo);
+// documents.addEventListener("click", openDocuments);
+// images.addEventListener("click", openImages);
+// audioVideo.addEventListener("click", openAudioVideo);
 buttonCreate.addEventListener("click", create);
 xClose.addEventListener("click", closeWindows);
 createDirectory.addEventListener("click", directoryCreate);
-card.addEventListener("click", openCard);
-xCloseRightPart.addEventListener("click", closeRightPart);
+// card.addEventListener("click", openCard);
+// xCloseRightPart.addEventListener("click", closeRightPart);
 cardFile.addEventListener("click", openFile);
 formDirectory.addEventListener("submit", createADirectory);
 

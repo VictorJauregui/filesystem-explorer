@@ -15,11 +15,10 @@ $newFileAudioVideo = "./root/trash/". $archivoName;
 
 if (strpos($name, 'jpeg') || strpos($name, 'png') || strpos($name, 'svg') !== false) {
     
-    move_uploaded_file($content,"root/images/" .$name);
+    move_uploaded_file($content,"root/" .$name);
     echo "You create this file:  " . date("d F Y H:i:s.", filemtime($newFileImage)). "<br>";
     echo "You modifiqued last time this file:  " . date("d F Y H:i:s.", filectime($newFileImage)) . "<br>";
     echo "The size of this file is:  " . $size / 100000 ."Bytes" . "<br>";
-    header("Location: index.php");
     if(strpos($name, 'png') !== false){
         echo "<img class='icon-type-documents' src='assets/icon-png.png' alt='icon png'>";
         echo 'It´s a PNG Document';

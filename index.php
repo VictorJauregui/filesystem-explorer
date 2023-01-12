@@ -92,7 +92,11 @@
                     <h2>Create</h2>
                 </div>
             </div>
-            <div class="all-sidebar-documents">
+            <?php
+            require_once("./get-files-and-folders.php");
+            
+            ?>
+            <!-- <div class="all-sidebar-documents">
                 <div class="div-type-sidebar div-type-sidebar1 div-document">
                     <img class="icon-type" src="assets/icon-documents.png" alt="icon document">
                     <h2 class="h2-title-sidebar">Documents</h2>
@@ -185,8 +189,8 @@
             <div class="div-type-sidebar">
                 <img class="icon-type" src="assets/icon-trash.png" alt="icon document">
                 <h2 class="h2-title-sidebar">Rubish</h2>
-            </div>
-        </div>
+            </div>-->
+        </div> 
         <div class="content">
             <h1>All</h1>
             <div class='every-type-documents'>
