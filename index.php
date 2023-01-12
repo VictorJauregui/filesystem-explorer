@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style1.css">
-    <script src="script1.js" defer></script>
+    <script src="script.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');
     </style>
@@ -59,8 +59,7 @@
                     <button class="button-secundary">BACK</button>
                     <button type="submit" class="button-primary">CREATE</button>
                 </div>
-            </form>
-            
+            </form>       
         </div>
     </div>
     <?php
@@ -73,6 +72,7 @@
             </div>";
         }
     ?>
+
    <!-------------------DASHBOARD---------------------> 
     </div>
     <div class="nav-bar">
@@ -188,46 +188,14 @@
         </div>
         <div class="content">
             <h1>All</h1>
-            <div class="every-type-documents">
-                <div class="card-document">
-                    <div class="div-icon-card">
-                        <img class="icon-card" src="assets/word-color.png" alt="icon power point">
+            <div class='every-type-documents'>
+                <div class='card-document'>
+                    <div class='div-icon-card'>
+                        <img class='icon-card' src='assets/word-color.png' alt='icon power point'>
                     </div>
                     <p>Lorem Ipsum is simply dummy text of the printing and</p>
                 </div>
-                <div class="card-document">
-                    <div class="div-icon-card">
-                        <img class="icon-card" src="assets/word-color.png" alt="icon power point">
-                    </div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and</p>
-                </div>
-                <div class="card-document">
-                    <div class="div-icon-card">
-                        <img class="icon-card" src="assets/word-color.png" alt="icon power point">
-                    </div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and</p>
-                </div>
-                <div class="card-document">
-                    <div class="div-icon-card">
-                        <img class="icon-card" src="assets/word-color.png" alt="icon power point">
-                    </div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and</p>
-                </div>
-                <div class="card-document">
-                    <div class="div-icon-card">
-                        <img class="icon-card" src="assets/word-color.png" alt="icon power point">
-                    </div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and</p>
-                </div>
-                <div class="card-document">
-                    <div class="div-icon-card">
-                        <img class="icon-card" src="assets/word-color.png" alt="icon power point">
-                    </div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and</p>
-                </div>
-                
-              
-            </div>  
+            </div>
         </div>
         <div class="content-individual-document">
             <div class="div-icon-close-right">

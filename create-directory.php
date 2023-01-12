@@ -9,8 +9,8 @@ $images = './root/images/nuevo' . $nameDirectory;
 $audioVideo = './root/audio-video/nuevo' . $nameDirectory;
 $trash = './root/trash/nuevo' . $nameDirectory;
 
-if (!file_exists($documents)) {
-    mkdir($documents, 0777, true);
+if (!file_exists($root)) {
+    mkdir($root, 0777, true);
     echo "está creada";
 }
 
