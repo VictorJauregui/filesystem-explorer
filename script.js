@@ -26,6 +26,8 @@ const cardFile = document.querySelector(".card-file");
 const formDisable = document.querySelector(".form-disable-file");
 const btnCreateDirectory = document.querySelector(".button-primary");
 const iconDirectory = document.querySelector(".icon-type");
+const formDirectory = document.querySelector("#create-directory-form");
+
 
 xClose2.addEventListener("click", closeWindows2);
 documents.addEventListener("click", openDocuments);
@@ -37,7 +39,7 @@ createDirectory.addEventListener("click", directoryCreate);
 card.addEventListener("click", openCard);
 xCloseRightPart.addEventListener("click", closeRightPart);
 cardFile.addEventListener("click", openFile);
-btnCreateDirectory.addEventListener("click", createADirectory);
+formDirectory.addEventListener("submit", createADirectory);
 
 
 function openDocuments(){
@@ -148,24 +150,39 @@ function openFile(){
     }
 }
 
-function createADirectory(){
-    const divDirectory = document.createElement("div");
-    divDirectory.classList = "div-type-sidebar";
+function createADirectory(e){
+    e.preventDefault();
+    let directoryName = e.target.elements["name-directory"].value;
+
+    fetch(`./create-directory.php?foldername=${directoryName}`, {
+        method: "GET",
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if(data.ok){
+            const divDirectory = document.createElement("div");
+            divDirectory.classList = "div-type-sidebar";
+
+
+            const iconDirectory = document.createElement("img");
+            iconDirectory.classList = "icon-type";
+            iconDirectory.setAttribute("src", "assets/icon-documents.png");
+
+            
+            const h2Directory = document.createElement("h2");
+            h2Directory.classList = "h2-title-sidebar";
+            h2Directory.textContent = data.name;
+
+            divDirectory.appendChild(iconDirectory);
+            divDirectory.appendChild(h2Directory);
+            allDocuments.appendChild(divDirectory);
+        }
+        })
+        .catch((err) => console.log("Request: ", err));
 
     
 
-    const iconDirectory = document.createElement("img");
-    iconDirectory.classList = "icon-type";
-    iconDirectory.setAttribute("src", "assets/icon-documents.png");
 
     
-
-    const h2Directory = document.createElement("h2");
-    h2Directory.classList = "h2-title-sidebar";
-    h2Directory.textContent = "hola";
-
-    divDirectory.appendChild(iconDirectory);
-    divDirectory.appendChild(h2Directory);
-    allDocuments.appendChild(divDirectory);
 
 }
