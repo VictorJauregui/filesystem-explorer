@@ -1,21 +1,15 @@
 <?php
 
 
-
-$name= $_FILES["file-upload"]["name"];
-$content = $_FILES["file-upload"]["tmp_name"];
-$btn = $_REQUEST["uploadBtn"];
+$name=$_FILES["Upload"]["name"];
 
 
+$content = $_FILES["Upload"]["tmp_name"];
 
-   
-    if(file_exists("uploadBtn")){
-        if(move_uploaded_file($content,"root/" . $name)){
-            echo "saved";
-        }else{
-            echo "error";
-        }
+    if(move_uploaded_file($content,"root/".$name)){
+        echo"saved";
+    } else{
+        echo"error";
     }
-
 
 ?>
