@@ -5,9 +5,9 @@ $nameDirectory = $_REQUEST["foldername"];
 
 $root = './root/'. $nameDirectory;
 $documents = './root/documents/' . $nameDirectory;
-$images = './root/images/nuevo' . $nameDirectory;
-$audioVideo = './root/audio-video/nuevo' . $nameDirectory;
-$trash = './root/trash/nuevo' . $nameDirectory;
+$images = './root/images/' . $nameDirectory;
+$audioVideo = './root/audio-video/' . $nameDirectory;
+$trash = './root/trash/' . $nameDirectory;
 
 
 $old_umask = umask(0);

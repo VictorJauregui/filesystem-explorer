@@ -2,13 +2,14 @@
 
 function getFilesAndFolders($path = "./root"){
     $everything = glob("$path/*");
+
     foreach($everything as $eachElement){
         if(is_file($eachElement)){
             $file = preg_replace('/\.[^.\s]{3,4}$/', '', basename($eachElement));
             echo "<div class='div-type-documents'>
-                <img class='icon-type-documents' src='assets/icon-ppt.png' alt='icon power point'>
-                <p class='text-type-document'>$file</p>
-            </div>";
+            <img class='icon-type-documents' src='assets/icon-ppt.png' alt='icon power point'>
+            <p class='text-type-document'>POWER POINT</p>
+        </div>";
             
         }
 
