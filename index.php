@@ -57,7 +57,6 @@ $content = $_FILES["Upload"]["tmp_name"];
         echo"error";
     }
 
-
 ?>
 </div>
                 </form>
