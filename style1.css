@@ -211,7 +211,7 @@ body{
 
 .card-document{
     padding: 10px 10px 0 10px;
-    height: 20vh;
+    height: 27vh;
     border-radius: 20px;
     background-color: white;
     border: 1px solid #DBDBDB;
@@ -219,11 +219,12 @@ body{
     margin: 50px 50px 0 0;
     cursor: pointer;
     transition: 0.5s;
+    text-align: center;
     
 }
 
 .card-document:hover {
-    padding: 15px;
+    padding: 7px;
     box-shadow: 2px 2px 5px #999;
 }
 
@@ -531,4 +532,32 @@ body{
     width: 1%;
     height: 1%;
     margin: 5px 10px;
+}
+
+.div-down-card{
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon-down-card{
+    width: 10%;
+}
+
+.icon-information:hover{
+    background-color:  rgba(0, 183, 0, 0.535);
+    border-radius: 10000px;
+    padding: 5px;
+}
+
+.icon-eye:hover{
+    background-color:  rgba(255, 166, 0, 0.508);
+    border-radius: 10000px;
+    padding: 5px;
+}
+
+.icon-delete:hover{
+
+    background-color: rgba(255, 0, 0, 0.421);
+    border-radius: 10000px;
+    padding: 5px;
 }

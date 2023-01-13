@@ -223,10 +223,31 @@ function createADirectory(e){
              const pFile = document.createElement("p");
              pFile.textContent = data.name;
 
+             const divDownCard = document.createElement("div");
+             divDownCard.classList = "div-down-card"
+
+             const iconInformation = document.createElement("img");
+             iconInformation.setAttribute("src", "assets/icon-information.png");
+             iconInformation.classList = "icon-down-card"
+
+             const iconEye = document.createElement("img");
+             iconEye.setAttribute("src", "assets/icon-eye.png");
+             iconEye.classList = "icon-down-card"
+
+             const iconDelete = document.createElement("img");
+             iconDelete.setAttribute("src", "assets/icon-waste.png");
+             iconDelete.classList = "icon-down-card"
+
              allCards.appendChild(cardNew);
              cardNew.appendChild(divIconFile);
              divIconFile.appendChild(iconFile);
              cardNew.appendChild(pFile);
+             cardNew.appendChild(divDownCard);
+             divDownCard.appendChild(iconInformation);
+             divDownCard.appendChild(iconEye);
+             divDownCard.appendChild(iconDelete);
+             
+
          }
          })
          .catch((err) => console.log("Request: ", err));
