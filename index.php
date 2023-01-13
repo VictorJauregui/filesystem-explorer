@@ -44,7 +44,7 @@
                 <input   type="submit" value="upload" >
                                        
 <?php
-session_start();
+
 
 $name=$_FILES["Upload"]["name"];
 
@@ -80,9 +80,8 @@ $content = $_FILES["Upload"]["tmp_name"];
             <div class="buttons-modal2">
                 <button class="button-secundary">BACK</button>
                 <button class="button-primary" >CREATE</button>
-                <form action="folders.php" method="post" name="fff">
-                    <input type="text" name="fff">
-                </form>
+               
+                      
             </div>
         </div>
     </div>
