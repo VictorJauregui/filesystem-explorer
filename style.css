@@ -88,6 +88,7 @@ body{
     cursor: pointer;
     margin-top: 40px;
     transition: 0.5s;
+    margin-bottom: 40px;
 
 }
 .btn-create:hover{
@@ -118,6 +119,8 @@ body{
     margin-top: 5px;
 
 }
+
+
 
 .div-type-sidebar:hover{
     background-color: #8BD5FF;
@@ -207,15 +210,16 @@ body{
 }
 
 .card-document{
-    background-color: white;
     padding: 10px 10px 0 10px;
     height: 20vh;
     border-radius: 20px;
+    background-color: white;
     border: 1px solid #DBDBDB;
     justify-content: space-between;
     margin: 50px 50px 0 0;
     cursor: pointer;
     transition: 0.5s;
+    
 }
 
 .card-document:hover {

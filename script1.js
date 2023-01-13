@@ -27,6 +27,7 @@ const formDisable = document.querySelector(".form-disable-file");
 const btnCreateDirectory = document.querySelector(".button-primary");
 const iconDirectory = document.querySelector(".icon-type");
 const formDirectory = document.querySelector("#create-directory-form");
+const formFile = document.querySelector(".form-disable-file");
 
 
 xClose2.addEventListener("click", closeWindows2);
@@ -40,6 +41,7 @@ createDirectory.addEventListener("click", directoryCreate);
 // xCloseRightPart.addEventListener("click", closeRightPart);
 cardFile.addEventListener("click", openFile);
 formDirectory.addEventListener("submit", createADirectory);
+formFile.addEventListener("submit", createAFile);
 
 
 function openDocuments(){
@@ -151,6 +153,7 @@ function openFile(){
 }
 
 function createADirectory(e){
+
     e.preventDefault();
     let directoryName = e.target.elements["name-directory"].value;
 
@@ -160,13 +163,15 @@ function createADirectory(e){
         .then((response) => response.json())
         .then((data) => {
           if(data.ok){
+            console.log(allDocuments);
+
             const divDirectory = document.createElement("div");
             divDirectory.classList = "div-type-sidebar";
 
 
             const iconDirectory = document.createElement("img");
             iconDirectory.classList = "icon-type";
-            iconDirectory.setAttribute("src", "assets/icon-documents.png");
+            iconDirectory.setAttribute("src", "assets/carpeta.png");
 
             
             const h2Directory = document.createElement("h2");
@@ -180,9 +185,54 @@ function createADirectory(e){
         })
         .catch((err) => console.log("Request: ", err));
 
-    
+        if(modalUpdate.classList.contains("modal-show")){
+            modalUpdate.classList.replace("modal-show", "modal")
+        }
 
-
-    
+        if(modalDirectory.classList.contains("modal2-show")){
+            modalDirectory.classList.replace("modal2-show", "modal2")
+        }
+   
 
 }
+
+ function createAFile(e){
+     e.preventDefault();
+     let fileName = e.target.elements["file-upload"].value;
+
+     fetch(`./create-file.php?filename=${fileName}`,{
+     method:"GET",
+     })
+
+     .then((response) => response.json())
+         .then((data) => {
+           if(data.ok){
+            
+             const cardNew = document.createElement("div")
+             cardNew.classList = "card-document";
+
+
+             const divIconFile = document.createElement("div")
+             divIconFile.classList = "div-icon-card";
+
+             const iconFile = document.createElement("img");
+             iconFile.classList = "icon-card";
+             iconFile.setAttribute("src", "assets/png.png");
+
+            
+             const pFile = document.createElement("p");
+             pFile.textContent = data.name;
+
+             allCards.appendChild(cardNew);
+             cardNew.appendChild(divIconFile);
+             divIconFile.appendChild(iconFile);
+             cardNew.appendChild(pFile);
+         }
+         })
+         .catch((err) => console.log("Request: ", err));
+
+         if(modalUpdate.classList.contains("modal-show")){
+            modalUpdate.classList.replace("modal-show", "modal")
+    
+    }
+ }

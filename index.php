@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
-    <script src="script.js?v=<?php echo time(); ?>" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script1.js?v=<?php echo time(); ?>" defer></script>
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');
@@ -96,7 +96,8 @@
             require_once("./get-files-and-folders.php");
             
             ?>
-            <!-- <div class="all-sidebar-documents">
+             <div class="all-sidebar-documents"></div>
+            <!--
                 <div class="div-type-sidebar div-type-sidebar1 div-document">
                     <img class="icon-type" src="assets/icon-documents.png" alt="icon document">
                     <h2 class="h2-title-sidebar">Documents</h2>
@@ -193,13 +194,17 @@
         </div> 
         <div class="content">
             <h1>All</h1>
+             
             <div class='every-type-documents'>
-                <div class='card-document'>
+            <?php
+            require_once("./get-files.php");
+            ?> 
+                <!-- <div class='card-document'>
                     <div class='div-icon-card'>
                         <img class='icon-card' src='assets/word-color.png' alt='icon power point'>
                     </div>
                     <p>Lorem Ipsum is simply dummy text of the printing and</p>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="content-individual-document">
