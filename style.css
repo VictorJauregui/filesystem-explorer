@@ -123,10 +123,7 @@ body{
 
 
 .div-type-sidebar:hover{
-    background-color: #8BD5FF;
-    margin-left: 10px;
-    margin-right: 10px;
-
+    background-color: #b9e4fc;
 }
 
 .div-type-sidebar1{
@@ -345,6 +342,23 @@ body{
     justify-content: center;
 }
 
+.modal-delete{
+    display: none;
+}
+
+.modal-delete-show{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.413);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 .contenido-modal2{
     width: 20%;
     height: 160px;
@@ -353,6 +367,43 @@ body{
     border-radius: 20px;
 }
 
+.contenido-modal-delete{
+    width: 20%;
+    background-color: white;
+    border-radius: 20px;
+
+}
+
+.h2-modal-delete{
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btns-delete{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin: 20px 0;
+}
+
+.btn-delete{
+    width: 25%;
+    height: 2rem;
+    margin-left: 10px;
+    color: #ffffff;
+    background-color: #FF5F5F;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-delete:hover{
+    border: 1px solid rgb(251, 96, 96);
+    box-shadow: 2px 2px 5px #999;
+
+}
 
 .h2-modal2{
     width: 100%;
@@ -561,3 +612,17 @@ body{
     border-radius: 10000px;
     padding: 5px;
 }
+
+.create-sub-folder{
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+}
+
+.create-sub-folder:hover{
+    width: 25px;
+    height: 25px;
+}
+
+
+

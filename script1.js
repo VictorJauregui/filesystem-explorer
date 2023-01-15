@@ -28,6 +28,14 @@ const btnCreateDirectory = document.querySelector(".button-primary");
 const iconDirectory = document.querySelector(".icon-type");
 const formDirectory = document.querySelector("#create-directory-form");
 const formFile = document.querySelector(".form-disable-file");
+const createSubFolder = document.querySelectorAll(".create-sub-folder")
+const iconInformation = document.querySelectorAll(".icon-information");
+const closeOpenCard = document.querySelectorAll(".div-icon-close-right");
+const deleteFile = document.querySelectorAll(".icon-delete");
+const modalDelete = document.querySelector(".modal-delete")
+
+
+/* EVENTS */
 
 
 xClose2.addEventListener("click", closeWindows2);
@@ -37,12 +45,32 @@ xClose2.addEventListener("click", closeWindows2);
 buttonCreate.addEventListener("click", create);
 xClose.addEventListener("click", closeWindows);
 createDirectory.addEventListener("click", directoryCreate);
-// card.addEventListener("click", openCard);
+
 // xCloseRightPart.addEventListener("click", closeRightPart);
 cardFile.addEventListener("click", openFile);
 formDirectory.addEventListener("submit", createADirectory);
 formFile.addEventListener("submit", createAFile);
 
+for(let i = 0; i < createSubFolder.length; i++){
+    createSubFolder[i].addEventListener("click", subFolder)
+}
+
+for(let i = 0; i < iconInformation.length; i++){
+    iconInformation[i].addEventListener("click", openCard);
+}
+
+for(let i = 0; i < closeOpenCard.length; i++){
+    closeOpenCard[i].addEventListener("click", closeInformation);
+}
+
+for(let i = 0; i < deleteFile.length; i++){
+    deleteFile[i].addEventListener("click", openDelete);
+}
+
+
+
+
+/* FUNCTIONS */
 
 function openDocuments(){
     typeOfDocuments.classList.toggle("type-of-documents");
@@ -123,15 +151,36 @@ function openCard(){
         rightPart.classList.replace("content-individual-document", "content-individual-document-show");
     }
     
-    card.style.border = "2px solid #A8FFAB"
-    card.style.backgroundColor = "2px solid #A8FFAB"
+    for(let i = 0; i < card.length; i++){
+        card[i].style.border = "2px solid #A8FFAB";
+        card[i].style.backgroundColor = "2px solid #A8FFAB";
+        card[i].style.height = "27vh"
+    }
+    
 
     sidebar.style.width = "20%";
     content.style.width = "60%"
-    card.style.height = "260px"
-    allCards.style.gridTemplateColumns = "30% 30% 30%"
+    allCards.style.gridTemplateColumns = "25% 25% 25% 25%"
 
 }
+
+function closeInformation(){
+    if(rightPart.classList.contains("content-individual-document-show")){
+        rightPart.classList.replace("content-individual-document-show", "content-individual-document");
+    }
+
+    sidebar.style.width = "20%";
+    content.style.width = "80%"
+    allCards.style.gridTemplateColumns = "20% 20% 20% 20% 20%"
+
+
+}
+
+
+
+
+
+
 
 function closeRightPart(){
     if(rightPart.classList.contains("content-individual-document-show")){
@@ -257,3 +306,18 @@ function createADirectory(e){
     
     }
  }
+
+
+ function subFolder(){
+    if(modalUpdate.classList.contains("modal")){
+        modalUpdate.classList.replace("modal", "modal-show");
+    }
+    
+ }
+
+ function openDelete(){
+    if(modalDelete.classList.contains("modal-delete")){
+        modalDelete.classList.replace("modal-delete", "modal-delete-show");
+    }
+ }
+ 

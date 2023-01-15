@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script1.js?v=<?php echo time(); ?>" defer></script>
     
     <style>
@@ -29,7 +29,7 @@
                     <div class="div-icon-type-update">
                         <img class="icon-type-update" src="assets/icon-directory.png" alt="icon-directory">
                     </div>
-                    <p>DIRECTORY</p>
+                    <p class="p-directory">DIRECTORY</p>
                 </div>
                 <div class="card-type-update card-file">
                         <label for="file-upload" style="cursor: pointer;">
@@ -46,6 +46,7 @@
             </div>
         </div>
     </div>
+    <!-------------------MODAL 2---------------------> 
     <div class="modal2">
         <div class="contenido-modal2">
             <div class="div-icon-close close-modal2">
@@ -63,6 +64,25 @@
             </form>       
         </div>
     </div>
+<!-------------------MODAL DELETE---------------------> 
+    <div class="modal-delete">
+        <div class="contenido-modal-delete">
+                <div class="div-icon-close close-modal2">
+                    <img class="icon-close icon-close2" src="assets/icon-close.png" alt="icon close">
+                </div>
+                <div class="top-contenido-delete">
+                    <h2 class="h2-modal-delete">Are you sure that you want to delete this file?</h2>
+                </div>
+                <form id="delete-file" method="GET">
+                    <div class="btns-delete">
+                        <button class="button-secundary">CANCEL</button>
+                        <button class="btn-delete">DELETE</button>
+                    </div>
+                </form>       
+        </div>  
+    </div>
+
+
     <?php
         if(isset($_GET["createsuccesfully"])){
             echo "<div class='modal-succesfully'>

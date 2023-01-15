@@ -19,8 +19,7 @@ function getFilesAndFolders($path = "./root"){
             <img class='icon-type' src='assets/carpeta.png' alt='icon document'>
             <h2 class='h2-title-sidebar'>$folder</h2>
             <div class='div-down-arrow'>
-                <img class='down-arrow' src='assets/arrow-down.png' alt='arrow-down'>
-                <img class='down-arrow up-arrow' src='assets/icon-arrow-up.png' alt='arrow-down'>
+                <img class='create-sub-folder' src='assets/icon-create.png' alt='arrow-down'>
             </div>
         </div>";
 
