@@ -232,6 +232,10 @@
                 </div> -->
             </div>
         </div>
+
+        <?php
+            require_once("./information.php");
+            ?> 
         <div class="content-individual-document">
             <div class="div-icon-close-right">
                 <img class="icon-close icon-close-right-part" src="assets/icon-close.png" alt="icon close">
@@ -256,9 +260,6 @@
                         <p>Microsoft Word</p>
                     </div>
                 </div>
-            </div>
-            <div class="div-logo2">
-                <img class="logo2" src="assets/logo2.png" alt="logo secundary">
             </div>
         </div>
         
