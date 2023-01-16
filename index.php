@@ -64,6 +64,26 @@
             </form>       
         </div>
     </div>
+
+<!-------------------MODAL 2---------------------> 
+
+    <div class="modal2-subFolder">
+        <div class="contenido-modal2-subFolder">
+            <div class="div-icon-close close-modal2-subFolder">
+                <img class="icon-close icon-modal2-subFolder" src="assets/icon-close.png" alt="icon close">
+            </div>
+            <div class="top-contenido-modal2-subFolder">
+                <h2 class="h2-modal2-subFolder">NAME OF DIRECTORY</h2>
+            </div>
+            <form id="create-directory-form" method="GET">
+                <input class="input-directory" type="text" name="name-directory">
+                <div class="buttons-modal2-subFolder">
+                    <button class="button-secundary">BACK</button>
+                    <button type="submit" class="button-primary">CREATE</button>
+                </div>
+            </form>       
+        </div>
+    </div>
 <!-------------------MODAL DELETE---------------------> 
     <div class="modal-delete">
         <div class="contenido-modal-delete">

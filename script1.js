@@ -347,16 +347,23 @@ function createADirectory(e){
     }
  }
 
+let subFolderName = "";
 
 function subFolder(e){
     
+    let subFolderName = e.target.getAttribute("path");
+    console.log(subFolderName)
 
-    fetch(`./create-file.php?filename=${fileName}`,{
+    fetch(`./create-subfolder.php?path=${subFolderName}`,{
         method:"GET",
         })
 
-    if(modalUpdate.classList.contains("modal")){
-        modalUpdate.classList.replace("modal", "modal-show");
+        window.location.href = `./create-subfolder.php?path=${subFolderName}`
+
+
+
+    if(modalDirectory.classList.contains("modal2")){
+        modalDirectory.classList.replace("modal2", "modal2-show");
     }
     
  }
@@ -373,7 +380,8 @@ function changeCurrentPath(e){
     }
 }
 
- 
+
+
     function openDelete(event){
     event.preventDefault();
     console.log(path);

@@ -376,7 +376,21 @@ body{
     display: none;
 }
 
+.modal2-subFolder {
+    display: none;
+}
+
 .modal2-show{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.529);
+    display: flex;
+    justify-content: center;
+}
+
+.modal2-show-subFolder{
     position: fixed;
     z-index: 2;
     width: 100%;
@@ -402,8 +416,15 @@ body{
 }
 
 
-
 .contenido-modal2{
+    width: 20%;
+    height: 160px;
+    margin-top: 300px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.contenido-modal2-subFolder{
     width: 20%;
     height: 160px;
     margin-top: 300px;
@@ -415,7 +436,6 @@ body{
     width: 20%;
     background-color: white;
     border-radius: 20px;
-
 }
 
 .h2-modal-delete{
@@ -455,6 +475,12 @@ body{
     text-align: center;
 }
 
+.h2-modal2-subFolder{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+} 
+
 .input-directory{
     width: 80%;
     margin: 0 auto;
@@ -474,6 +500,10 @@ body{
     margin-top: 15px;
 }
 
+.close-modal2-subFolder{
+    margin-top: 15px;
+}
+
 .icon-close2{
     margin-right: 15px;
     width: 10px;
@@ -481,6 +511,11 @@ body{
 }
 
 .buttons-modal2{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-modal2-subFolder{
     display: flex;
     justify-content: center;
 }
