@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script1.js?v=<?php echo time(); ?>" defer></script>
     
     <style>
@@ -65,7 +65,7 @@
         </div>
     </div>
 
-<!-------------------MODAL 2---------------------> 
+<!-------------------MODAL 2 SUBFOLDER---------------------> 
 
     <div class="modal2-subFolder">
         <div class="contenido-modal2-subFolder">
@@ -73,15 +73,13 @@
                 <img class="icon-close icon-modal2-subFolder" src="assets/icon-close.png" alt="icon close">
             </div>
             <div class="top-contenido-modal2-subFolder">
-                <h2 class="h2-modal2-subFolder">NAME OF DIRECTORY</h2>
+                <h2 class="h2-modal2-subFolder">NAME OF SUB-DIRECTORY</h2>
             </div>
-            <form id="create-directory-form" method="GET">
-                <input class="input-directory" type="text" name="name-directory">
+                <input class="input-directory" type="text" name="name-directory" id="input-subFolder">
                 <div class="buttons-modal2-subFolder">
                     <button class="button-secundary">BACK</button>
-                    <button type="submit" class="button-primary">CREATE</button>
-                </div>
-            </form>       
+                    <button type="submit" class="button-primary" id="btn-subFolder">CREATE</button>
+                </div>     
         </div>
     </div>
 <!-------------------MODAL DELETE---------------------> 

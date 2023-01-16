@@ -2,7 +2,9 @@
 
 
 $namePath = $_REQUEST["path"];
-echo $namePath;
+$folderName = $_REQUEST["folderName"];
+
+mkdir($namePath . "/" . $folderName, 0777, true);
 
 
 

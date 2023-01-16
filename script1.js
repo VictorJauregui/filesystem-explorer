@@ -38,13 +38,12 @@ const titleFolder = document.querySelector(".h1-tittle-folder");
 const titleFile = document.querySelector("#title-file");
 const dateCreation = document.querySelector("#date-creation");
 const dateModification = document.querySelector("#date-modification");
-
-
+const createSubfolder = document.querySelector(".modal2-subFolder");
+const btnSubFolder = document.querySelector("#btn-subFolder");
 
 
 
 /* EVENTS */
-
 
 xClose2.addEventListener("click", closeWindows2);
 // documents.addEventListener("click", openDocuments);
@@ -77,7 +76,7 @@ for(let i = 0; i < openFolderSidebar.length; i++){
     openFolderSidebar[i].addEventListener("click", openFolder);
 }
 
-
+btnSubFolder.addEventListener("click", createNewSubFolder);
 
 
 /* FUNCTIONS */
@@ -351,22 +350,35 @@ let subFolderName = "";
 
 function subFolder(e){
     
-    let subFolderName = e.target.getAttribute("path");
-    console.log(subFolderName)
+    subFolderName = e.target.getAttribute("path");
+    console.log(subFolderName);
 
-    fetch(`./create-subfolder.php?path=${subFolderName}`,{
-        method:"GET",
-        })
-
-        window.location.href = `./create-subfolder.php?path=${subFolderName}`
-
-
-
-    if(modalDirectory.classList.contains("modal2")){
-        modalDirectory.classList.replace("modal2", "modal2-show");
+    if(createSubfolder.classList.contains("modal2-subFolder")){
+        createSubfolder.classList.replace("modal2-subFolder", "modal2-show-subFolder");
     }
     
  }
+
+function createNewSubFolder(e){
+    console.log(subFolderName);
+    const inputSubFolder = document.querySelector("#input-subFolder");
+    let subFolderNewName = inputSubFolder.value;
+
+    // fetch(`./create-subfolder.php?foldername=${subFolderNewName}&path=${subFolderName}`,{
+    //     method:"GET",
+    //     })
+
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //         console.log(data);
+            
+    //     })
+    
+    window.location.href = `./create-subfolder.php?folderName=${subFolderNewName}&path=${subFolderName}`;
+}
+
+
+
 
     let path = "";
 
@@ -426,6 +438,5 @@ function openEye(event){
         titleFolder.innerHTML = nameFolder;
     }
 
-    
 
 }
