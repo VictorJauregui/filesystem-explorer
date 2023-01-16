@@ -313,7 +313,7 @@ function createADirectory(e){
 
          if(modalUpdate.classList.contains("modal-show")){
             modalUpdate.classList.replace("modal-show", "modal")
-    
+    //why error?    
     }
  }
 
@@ -419,7 +419,7 @@ fetch(`./search.php?filename=${searchBtnn}`,{
             divDownCard.appendChild(iconDelete);
             
 
-        
-        })}
 
+        })}
+                                                
         
