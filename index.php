@@ -73,12 +73,11 @@
                 <div class="top-contenido-delete">
                     <h2 class="h2-modal-delete">Are you sure that you want to delete this file?</h2>
                 </div>
-                <form id="delete-file" method="GET">
-                    <div class="btns-delete">
-                        <button class="button-secundary">CANCEL</button>
-                        <button class="btn-delete">DELETE</button>
-                    </div>
-                </form>       
+                <div class="btns-delete">
+                    <button class="button-secundary">CANCEL</button>
+                    <button onclick="openDelete(event)" class="btn-delete">DELETE</button>
+                </div>
+                
         </div>  
     </div>
 

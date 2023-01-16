@@ -42,6 +42,7 @@ const dateModification = document.querySelector("#date-modification");
 
 
 
+
 /* EVENTS */
 
 
@@ -323,7 +324,8 @@ function createADirectory(e){
              const iconDelete = document.createElement("img");
              iconDelete.setAttribute("src", "assets/icon-waste.png");
              iconDelete.classList = "icon-down-card";
-             iconDelete.addEventListener("click", openDelete);
+             iconDelete.setAttribute("path", data.path);
+             iconDelete.addEventListener("click", changeCurrentPath);
 
              allCards.appendChild(cardNew);
              cardNew.appendChild(divIconFile);
@@ -346,32 +348,51 @@ function createADirectory(e){
  }
 
 
- function subFolder(){
+function subFolder(e){
+    
+
+    fetch(`./create-file.php?filename=${fileName}`,{
+        method:"GET",
+        })
+
     if(modalUpdate.classList.contains("modal")){
         modalUpdate.classList.replace("modal", "modal-show");
     }
     
  }
 
- function openDelete(event){
-    let file = event.target.getAttribute("path");
-    let fileName = event.target.getAttribute("name");
-    console.log(file);
-    
+    let path = "";
 
-    fetch(`./delete.php?delete=${file}&fileName=${fileName}`, {
+    
+function changeCurrentPath(e){
+    path = e.target.getAttribute("path");
+    console.log(path);
+
+    if(modalDelete.classList.contains("modal-delete")){
+        modalDelete.classList.replace("modal-delete", "modal-delete-show");
+    }
+}
+
+ 
+    function openDelete(event){
+    event.preventDefault();
+    console.log(path);
+    fetch(`./delete.php?delete=${path}`, {
         method: "GET",
       })
 
     
-    if(modalDelete.classList.contains("modal-delete")){
-        modalDelete.classList.replace("modal-delete", "modal-delete-show");
+    if(modalDelete.classList.contains("modal-delete-show")){
+        modalDelete.classList.replace("modal-delete-show", "modal-delete");
     }
+
+    window.location.href = "./index.php"
  }
  
+
 function openEye(event){
-    let file = event.target.getAttribute("path");
-    console.log(file)
+    let file = event;
+    console.log(file);
     let fileName = event.target.getAttribute("name");
     
     fetch(`./open-file.php?open=${file}&fileName=${fileName}`, {
