@@ -35,6 +35,10 @@ const deleteFile = document.querySelectorAll(".icon-delete");
 const modalDelete = document.querySelector(".modal-delete");
 const openFolderSidebar = document.querySelectorAll(".div-type-sidebar");
 const titleFolder = document.querySelector(".h1-tittle-folder");
+const titleFile = document.querySelector("#title-file");
+const dateCreation = document.querySelector("#date-creation");
+const dateModification = document.querySelector("#date-modification");
+
 
 
 
@@ -58,17 +62,15 @@ for(let i = 0; i < createSubFolder.length; i++){
     createSubFolder[i].addEventListener("click", subFolder)
 }
 
-for(let i = 0; i < iconInformation.length; i++){
-    iconInformation[i].addEventListener("click", openCard);
-}
+// for(let i = 0; i < iconInformation.length; i++){
+//     iconInformation[i].addEventListener("click", openCard);
+// }
 
 for(let i = 0; i < closeOpenCard.length; i++){
     closeOpenCard[i].addEventListener("click", closeInformation);
 }
 
-for(let i = 0; i < deleteFile.length; i++){
-    deleteFile[i].addEventListener("click", openDelete);
-}
+
 
 for(let i = 0; i < openFolderSidebar.length; i++){
     openFolderSidebar[i].addEventListener("click", openFolder);
@@ -127,9 +129,16 @@ function openAudioVideo(){
 }
 
 function create(){
+    
+
+    // if(modalDirectory.classList.contains("modal2")){
+    //     modalDirectory.classList.replace("modal2", "modal2-show")
+    // }
+
     if(modalUpdate.classList.contains("modal")){
         modalUpdate.classList.replace("modal", "modal-show")
-    }
+
+}
 
 }
 
@@ -152,7 +161,26 @@ function directoryCreate(){
     }
 }
 
-function openCard(){
+function openCard(event){
+    // event.preventDefault();
+    let file = event.target.getAttribute("path");
+    let fileName = event.target.getAttribute("name");
+
+
+    fetch(`./information.php?card=${file}&fileName=${fileName}`, {
+        method: "GET",
+      })
+
+      .then((response) => response.json())
+        .then((data) => {
+          titleFile.innerHTML = data.fileName;
+          dateCreation.innerHTML = data.dateCreation;
+          dateModification.innerHTML = data.dateModification;
+        })
+        .catch((err) => console.log("Request: ", err));
+    
+
+
 
     if(rightPart.classList.contains("content-individual-document")){
         rightPart.classList.replace("content-individual-document", "content-individual-document-show");
@@ -171,6 +199,7 @@ function openCard(){
 
 }
 
+
 function closeInformation(){
     if(rightPart.classList.contains("content-individual-document-show")){
         rightPart.classList.replace("content-individual-document-show", "content-individual-document");
@@ -182,10 +211,6 @@ function closeInformation(){
 
 
 }
-
-
-
-
 
 
 
@@ -257,7 +282,6 @@ function createADirectory(e){
  function createAFile(e){
      e.preventDefault();
      let fileName = e.target.elements["file-upload"].files[0].name;
-     console.log(fileName);
 
      fetch(`./create-file.php?filename=${fileName}`,{
      method:"GET",
@@ -273,6 +297,7 @@ function createADirectory(e){
 
              const divIconFile = document.createElement("div")
              divIconFile.classList = "div-icon-card";
+             
 
              const iconFile = document.createElement("img");
              iconFile.classList = "icon-card";
@@ -288,6 +313,8 @@ function createADirectory(e){
              const iconInformation = document.createElement("img");
              iconInformation.setAttribute("src", "assets/icon-information.png");
              iconInformation.classList = "icon-down-card"
+             iconInformation.setAttribute("path", data.path);
+             iconInformation.addEventListener("click", openCard);
 
              const iconEye = document.createElement("img");
              iconEye.setAttribute("src", "assets/icon-eye.png");
@@ -295,7 +322,8 @@ function createADirectory(e){
 
              const iconDelete = document.createElement("img");
              iconDelete.setAttribute("src", "assets/icon-waste.png");
-             iconDelete.classList = "icon-down-card"
+             iconDelete.classList = "icon-down-card";
+             iconDelete.addEventListener("click", openDelete);
 
              allCards.appendChild(cardNew);
              cardNew.appendChild(divIconFile);
@@ -325,15 +353,37 @@ function createADirectory(e){
     
  }
 
- function openDelete(){
+ function openDelete(event){
+    let file = event.target.getAttribute("path");
+    let fileName = event.target.getAttribute("name");
+    console.log(file);
+    
+
+    fetch(`./delete.php?delete=${file}&fileName=${fileName}`, {
+        method: "GET",
+      })
+
+    
     if(modalDelete.classList.contains("modal-delete")){
         modalDelete.classList.replace("modal-delete", "modal-delete-show");
     }
  }
  
- function openFolder(e){
+function openEye(event){
+    let file = event.target.getAttribute("path");
+    console.log(file)
+    let fileName = event.target.getAttribute("name");
+    
+    fetch(`./open-file.php?open=${file}&fileName=${fileName}`, {
+        method: "GET",
+      })
+}
 
-    e.preventDefault();
+
+
+ function openFolder(e){
+    
+    
     let nameFolder; 
 
     if(e.target.matches(".div-type-sidebar")){

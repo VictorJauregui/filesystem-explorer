@@ -1,10 +1,9 @@
 <?php
 
-$file = $_REQUEST["card"];
+$file = $_REQUEST["delete"];
 $fileName = $_REQUEST["fileName"];
-$dateCreation = date("d F Y H:i:s.", filectime($file));
-$dateModification = date("d F Y H:i:s.", filemtime($file));
 
+unlink($file);
 
 echo json_encode([
     'ok' => true,

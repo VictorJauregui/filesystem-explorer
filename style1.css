@@ -91,7 +91,38 @@ body{
     margin-bottom: 40px;
 
 }
+
+.btn-create-file{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    justify-content: center;
+    width: fit-content;
+    padding: 0px 30px;
+    height: 3rem;
+    background-color: white;
+    border-radius: 30px;
+    color: #35C4FE;
+    border: 1px solid #35C4FE;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: 0.5s;
+    margin-bottom: 40px;
+    margin-right: 100px;
+
+
+}
+
+
 .btn-create:hover{
+    background-color: #8BD5FF;
+    color: white;
+    padding: 0px 40px;
+    border: 1px solid white;
+
+}
+
+.btn-create-file:hover{
     background-color: #8BD5FF;
     color: white;
     padding: 0px 40px;
@@ -104,7 +135,20 @@ body{
     justify-content: center;
 }
 
+.div-btn-create-file{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+
+}
+
 .btn-create img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.btn-create-file img {
     width: 30px;
     height: 30px;
     margin-right: 10px;

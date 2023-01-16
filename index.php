@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <script src="script1.js?v=<?php echo time(); ?>" defer></script>
     
     <style>
@@ -38,7 +38,7 @@
                             </div>
                             <p>FILE</p>
                         </label>
-                    <form class="form-disable-file" action="information.php" method="POST" enctype="multipart/form-data">
+                    <form class="form-disable-file" enctype="multipart/form-data">
                         <input class="input-file-disable" id="file-upload" type="file" name="file-upload"> 
                         <button type="submit" name="uploadBtn">UPLOAD</button>   
                     </form>     
@@ -121,18 +121,44 @@
         </div> 
         <div class="content">
             <h1 class="h1-tittle-folder">All</h1>
-             
             <div class='every-type-documents'>
             <?php
             require_once("./get-files.php");
-            ?> 
-              
+            ?>  
+            </div>
+            <div class="div-btn-create-file">
+                <div class="btn-create-file">
+                    <img src="assets/icon-create.png" alt="create icon">
+                    <h2>Create a file</h2>
+                </div>
             </div>
         </div>
-
-        <?php
-            require_once("./information.php");
-            ?> 
+        <div class='content-individual-document'>
+         <div class='div-icon-close-right'>
+                <img class='icon-close icon-close-right-part' src='assets/icon-close.png' alt='icon close'>
+            </div>
+            <div class='top-type-document'>
+                <div class='div-individual-content'>
+                    <h2>TITLE</h2>
+                    <p id="title-file"></p>
+                </div>   
+                <div class='div-individual-content'>
+                    <h2>CREATION DATE</h2>
+                    <p id="date-creation"></p>
+                </div>  
+                <div class='div-individual-content'>
+                    <h2>LAST MODIFIED DATE</h2>
+                    <p id="date-modification"></p>
+                </div>  
+                <div class='div-individual-content'>
+                    <h2>TYPE</h2>
+                    <div class='icon-and-name'>
+                        <img class='icon-type-document' src='assets/word-color.png' alt='type of document'>
+                        <p>Microsoft Word</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         
     </div>

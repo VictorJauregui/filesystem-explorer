@@ -1,10 +1,9 @@
 <?php
 
-$file = $_REQUEST["card"];
+$file = $_REQUEST["open"];
 $fileName = $_REQUEST["fileName"];
-$dateCreation = date("d F Y H:i:s.", filectime($file));
-$dateModification = date("d F Y H:i:s.", filemtime($file));
 
+fopen($file, "r");
 
 echo json_encode([
     'ok' => true,
