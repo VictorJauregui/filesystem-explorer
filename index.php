@@ -38,7 +38,7 @@
                             </div>
                             <p>FILE</p>
                         </label>
-                    <form class="form-disable-file" action="file.php" method="POST" enctype="multipart/form-data">
+                    <form class="form-disable-file" action="information.php" method="POST" enctype="multipart/form-data">
                         <input class="input-file-disable" id="file-upload" type="file" name="file-upload"> 
                         <button type="submit" name="uploadBtn">UPLOAD</button>   
                     </form>     
@@ -117,151 +117,23 @@
             
             ?>
              <div class="all-sidebar-documents"></div>
-            <!--
-                <div class="div-type-sidebar div-type-sidebar1 div-document">
-                    <img class="icon-type" src="assets/icon-documents.png" alt="icon document">
-                    <h2 class="h2-title-sidebar">Documents</h2>
-                    <div class="div-down-arrow">
-                        <img class="down-arrow" src="assets/arrow-down.png" alt="arrow-down">
-                        <img class="down-arrow up-arrow" src="assets/icon-arrow-up.png" alt="arrow-down">
-                    </div>
-                </div>
-                <div class="type-of-documents">
-                    <div class="div-type-documents">
-                        <img class="icon-type-documents" src="assets/icon-ppt.png" alt="icon power point">
-                        <p class="text-type-document">POWER POINT</p>
-                    </div> 
-                    <div class="div-type-documents">
-                        <img class="icon-type-documents" src="assets/icon-word.png" alt="icon word">
-                        <p class="text-type-document">WORD</p>
-                    </div>  
-                    <div class="div-type-documents">
-                        <img class="icon-type-documents" src="assets/icon-csv.png" alt="icon csv">
-                        <p class="text-type-document">CSV</p>
-                    </div>  
-                    <div class="div-type-documents">
-                        <img class="icon-type-documents" src="assets/icon-odt.png" alt="icon odt">
-                        <p class="text-type-document">ODT</p>
-                    </div>  
-                    <div class="div-type-documents">
-                        <img class="icon-type-documents" src="assets/icon-pptt.png" alt="icon ppt">
-                        <p class="text-type-document">PPT</p>
-                    </div>  
-                    <div class="div-type-documents">
-                        <img class="icon-type-documents" src="assets/icon-txt.png" alt="icon txt">
-                        <p class="text-type-document">TXT</p>
-                    </div>  
-                    <div class="div-type-documents">
-                        <img class="icon-type-documents" src="assets/icon-exe.png" alt="icon exe">
-                        <p class="text-type-document">EXE</p>
-                    </div> 
-                    <div class="div-type-documents">
-                        <img class="icon-type-documents" src="assets/icon-zip.png" alt="icon zip">
-                        <p class="text-type-document">ZIP</p>
-                    </div> 
-                    <div class="div-type-documents">
-                        <img class="icon-type-documents" src="assets/icon-rar.png" alt="icon rar">
-                        <p class="text-type-document">RAR</p>
-                    </div> 
-                </div>
-            </div>
-            <div class="all-sidebar-images">
-                <div class="div-type-sidebar div-images">
-                    <img class="icon-type" src="assets/icon-images.png" alt="icon images">
-                    <h2 class="h2-title-sidebar">Images</h2>
-                    <div class="div-down-arrow">
-                        <img class="down-arrow" src="assets/arrow-down.png" alt="arrow-down">
-                    </div> 
-                </div>
-                <div class="type-of-images">
-                    <div class="div-type-images">
-                        <img class="icon-type-documents" src="assets/icon-jpg.png" alt="icon jpg">
-                        <p class="text-type-document">JPG</p>
-                    </div> 
-                    <div class="div-type-images">
-                        <img class="icon-type-documents" src="assets/icon-png.png" alt="icon png">
-                        <p class="text-type-document">PNG</p>
-                    </div> 
-                    <div class="div-type-images">
-                        <img class="icon-type-documents" src="assets/icon-jpg.png" alt="icon svg">
-                        <p class="text-type-document">SVG</p>
-                    </div> 
-                </div>
-            </div>
-            <div class="all-sidebar-audio-video">
-                <div class="div-type-sidebar div-audio-video">
-                    <img class="icon-type" src="assets/icon-audio-video.png" alt="icon audio-video">
-                    <h2 class="h2-title-sidebar">Audio/Video</h2>
-                    <div class="div-down-arrow">
-                        <img class="down-arrow" src="assets/arrow-down.png" alt="arrow-down">
-                    </div> 
-                </div>
-                <div class="type-of-audio-video">
-                    <div class="div-type-audio-video">
-                        <img class="icon-type-documents" src="assets/icon-mp3.png" alt="icon mp3">
-                        <p class="text-type-document">MP3</p>
-                    </div> 
-                    <div class="div-type-audio-video">
-                        <img class="icon-type-documents" src="assets/icon-mp4.png" alt="icon mp4">
-                        <p class="text-type-document">MP4</p>
-                    </div> 
-                </div>
-            </div>
-            <div class="div-type-sidebar">
-                <img class="icon-type" src="assets/icon-trash.png" alt="icon document">
-                <h2 class="h2-title-sidebar">Rubish</h2>
-            </div>-->
+            
         </div> 
         <div class="content">
-            <h1>All</h1>
+            <h1 class="h1-tittle-folder">All</h1>
              
             <div class='every-type-documents'>
             <?php
             require_once("./get-files.php");
             ?> 
-                <!-- <div class='card-document'>
-                    <div class='div-icon-card'>
-                        <img class='icon-card' src='assets/png.png' alt='icon power point'>
-                    </div>
-                    <p>$file</p>
-                    <div class='div-down-card'>
-                        <img class='icon-down-card icon-information' src='assets/icon-information.png' alt='icon information'>
-                        <img class='icon-down-card icon-eye' src='assets/icon-eye.png' alt=''>
-                        <img class='icon-down-card icon-delete' src='assets/icon-waste.png' alt='icon-delete'
-                     <div>
-                </div> -->
+              
             </div>
         </div>
 
         <?php
             require_once("./information.php");
             ?> 
-        <div class="content-individual-document">
-            <div class="div-icon-close-right">
-                <img class="icon-close icon-close-right-part" src="assets/icon-close.png" alt="icon close">
-            </div>
-            <div class="top-type-document">
-                <div class="div-individual-content">
-                    <h2>TITLE</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing</p>
-                </div>   
-                <div class="div-individual-content">
-                    <h2>CREATION DATE</h2>
-                    <p>02-01-2023</p>
-                </div>  
-                <div class="div-individual-content">
-                    <h2>LAST MODIFIED DATE</h2>
-                    <p>05-01-2023</p>
-                </div>  
-                <div class="div-individual-content">
-                    <h2>TYPE</h2>
-                    <div class="icon-and-name">
-                        <img class="icon-type-document" src="assets/word-color.png" alt="type of document">
-                        <p>Microsoft Word</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         
     </div>
     

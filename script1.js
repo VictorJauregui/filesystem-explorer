@@ -32,7 +32,10 @@ const createSubFolder = document.querySelectorAll(".create-sub-folder")
 const iconInformation = document.querySelectorAll(".icon-information");
 const closeOpenCard = document.querySelectorAll(".div-icon-close-right");
 const deleteFile = document.querySelectorAll(".icon-delete");
-const modalDelete = document.querySelector(".modal-delete")
+const modalDelete = document.querySelector(".modal-delete");
+const openFolderSidebar = document.querySelectorAll(".div-type-sidebar");
+const titleFolder = document.querySelector(".h1-tittle-folder");
+
 
 
 /* EVENTS */
@@ -65,6 +68,10 @@ for(let i = 0; i < closeOpenCard.length; i++){
 
 for(let i = 0; i < deleteFile.length; i++){
     deleteFile[i].addEventListener("click", openDelete);
+}
+
+for(let i = 0; i < openFolderSidebar.length; i++){
+    openFolderSidebar[i].addEventListener("click", openFolder);
 }
 
 
@@ -245,9 +252,12 @@ function createADirectory(e){
 
 }
 
+/* ARREGLO FAKEPATH*/
+
  function createAFile(e){
      e.preventDefault();
-     let fileName = e.target.elements["file-upload"].value;
+     let fileName = e.target.elements["file-upload"].files[0].name;
+     console.log(fileName);
 
      fetch(`./create-file.php?filename=${fileName}`,{
      method:"GET",
@@ -321,3 +331,22 @@ function createADirectory(e){
     }
  }
  
+ function openFolder(e){
+
+    e.preventDefault();
+    let nameFolder; 
+
+    if(e.target.matches(".div-type-sidebar")){
+        nameFolder = e.target.children[1].innerText;
+        titleFolder.innerHTML = nameFolder;
+    } else if(e.target.matches(".icon-type")){
+        nameFolder = e.target.nextElementSibling.innerText;
+        titleFolder.innerHTML = nameFolder;
+    } else if(e.target.matches(".h2-title-sidebar")){
+        nameFolder = e.target.innerText;
+        titleFolder.innerHTML = nameFolder;
+    }
+
+    
+
+}
