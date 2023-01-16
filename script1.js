@@ -347,6 +347,79 @@ function createADirectory(e){
         titleFolder.innerHTML = nameFolder;
     }
 
-    
 
 }
+
+
+const sB=document.querySelector("#search");
+sB.addEventListener("click",search);
+
+function search(){
+
+let searchBtnn=document.querySelector("#keywords").value;
+searchBtnn=searchBtnn.toLowerCase();
+
+
+fetch(`./search.php?filename=${searchBtnn}`,{
+    method:"GET",
+    })
+
+    .then((response) => response.json())
+        .then((data) => {
+        
+        let files = data.files;
+        let folders = data.folders;
+
+         let filteredFiles = files.filter((file)=> file.includes(searchBtnn))
+        console.log(filteredFiles)
+        
+        let filteredFolders = folders.filter((folder)=> folder.includes(searchBtnn))
+        console.log(filteredFolders)
+
+         
+
+           
+            const cardNew = document.createElement("div")
+            cardNew.classList = "card-document";
+
+
+            const divIconFile = document.createElement("div")
+            divIconFile.classList = "div-icon-card";
+
+            const iconFile = document.createElement("img");
+            iconFile.classList = "icon-card";
+            iconFile.setAttribute("src", "assets/png.png");
+
+           
+            const pFile = document.createElement("p");
+            pFile.textContent = data.name;
+
+            const divDownCard = document.createElement("div");
+            divDownCard.classList = "div-down-card"
+
+            const iconInformation = document.createElement("img");
+            iconInformation.setAttribute("src", "assets/icon-information.png");
+            iconInformation.classList = "icon-down-card"
+
+            const iconEye = document.createElement("img");
+            iconEye.setAttribute("src", "assets/icon-eye.png");
+            iconEye.classList = "icon-down-card"
+
+            const iconDelete = document.createElement("img");
+            iconDelete.setAttribute("src", "assets/icon-waste.png");
+            iconDelete.classList = "icon-down-card"
+
+            allCards.appendChild(cardNew);
+            cardNew.appendChild(divIconFile);
+            divIconFile.appendChild(iconFile);
+            cardNew.appendChild(pFile);
+            cardNew.appendChild(divDownCard);
+            divDownCard.appendChild(iconInformation);
+            divDownCard.appendChild(iconEye);
+            divDownCard.appendChild(iconDelete);
+            
+
+        
+        })}
+
+        

@@ -13,7 +13,7 @@ body{
 .nav-bar {
     background-color: #5B5B5B;
     display: flex;
-    align-items: center;
+   
     height: 8vh;
 }
 
@@ -624,5 +624,7 @@ body{
     height: 25px;
 }
 
-
+#search{
+    display: block;
+}
 
