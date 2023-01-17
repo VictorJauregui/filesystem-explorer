@@ -33,7 +33,7 @@
                     </div>
                     <p class="p-directory">DIRECTORY</p>
                 </div>
-                <div class="card-type-update card-file">
+                <!-- <div class="card-type-update card-file">
                     <label for="file-upload" style="cursor: pointer;">
                         <div class="div-icon-type-update">
                             <img class="icon-type-update" src="assets/icon-file.png" alt="icon-directory">
@@ -44,7 +44,7 @@
                         <input class="input-file-disable" id="file-upload" type="file" name="file-upload">
                         <button type="submit" name="uploadBtn">UPLOAD</button>
                     </form>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -141,29 +141,17 @@
                
                 ?>
             </div>
-            <!-- <div class="card-type-update card-file">
-                        <label for="file-upload" style="cursor: pointer;">
-                            <div class="div-icon-type-update" >
-                                <img class="icon-type-update" src="assets/icon-file.png" alt="icon-directory">
-                            </div>
-                            <p>FILE</p>
-                        </label>
-                    <form class="form-disable-file" enctype="multipart/form-data">
-                        <input class="input-file-disable" id="file-upload" type="file" name="file-upload"> 
-                        <button type="submit" name="uploadBtn">UPLOAD</button>   
-                    </form>     
-                </div> -->
-            <div class="card-type-update div-btn-create-file">
+            <div class="div-btn-create-file card-file">
                 <label for="file-upload">
                     <div class="div-icon-type-update btn-create-file">
                         <img class="icon-type-update" src="assets/icon-create.png" alt="create icon">
                         <h2>Create a file</h2>
                     </div>
                 </label>
-                <form class="form-disable-file" enctype="multipart/form-data">
+                <div class="form-disable-file" enctype="multipart/form-data">
                     <input class="input-file-disable" id="file-upload" type="file" name="file-upload">
                     <button type="submit" name="uploadBtn">UPLOAD</button>
-                </form>
+                </div>
             </div>
         </div>
         <div class='content-individual-document'>

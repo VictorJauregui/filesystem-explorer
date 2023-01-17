@@ -23,7 +23,6 @@ const iconCard = document.querySelector(".icon-card");
 const xCloseRightPart = document.querySelector(".icon-close-right-part");
 const allCards = document.querySelector(".every-type-documents");
 const cardFile = document.querySelector(".card-file");
-const formDisable = document.querySelector(".form-disable-file");
 const btnCreateDirectory = document.querySelector(".button-primary");
 const iconDirectory = document.querySelector(".icon-type");
 const formDirectory = document.querySelector("#create-directory-form");
@@ -44,14 +43,9 @@ const btnSubFolder = document.querySelector("#btn-subFolder");
 /* EVENTS */
 
 xClose2.addEventListener("click", closeWindows2);
-// documents.addEventListener("click", openDocuments);
-// images.addEventListener("click", openImages);
-// audioVideo.addEventListener("click", openAudioVideo);
 buttonCreate.addEventListener("click", create);
 xClose.addEventListener("click", closeWindows);
 createDirectory.addEventListener("click", directoryCreate);
-
-// xCloseRightPart.addEventListener("click", closeRightPart);
 cardFile.addEventListener("click", openFile);
 formDirectory.addEventListener("submit", createADirectory);
 formFile.addEventListener("submit", createAFile);
@@ -206,9 +200,9 @@ function closeRightPart() {
 
 function openFile() {
   console.log("hola");
-  if (formDisable.classList.contains("form-disable-file")) {
+  if (formFile.classList.contains("form-disable-file")) {
     setInterval(() => {
-      formDisable.classList.replace(
+      formFile.classList.replace(
         "form-disable-file",
         "form-disable-file-show"
       );
