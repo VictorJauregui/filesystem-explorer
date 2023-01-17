@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script1.js?v=<?php echo time(); ?>" defer></script>
 
     <style>
@@ -141,19 +141,8 @@
 
             ?>
         </div>
-        <!-- <div class="card-type-update card-file">
-                        <label for="file-upload" style="cursor: pointer;">
-                            <div class="div-icon-type-update" >
-                                <img class="icon-type-update" src="assets/icon-file.png" alt="icon-directory">
-                            </div>
-                            <p>FILE</p>
-                        </label>
-                    <form class="form-disable-file" enctype="multipart/form-data">
-                        <input class="input-file-disable" id="file-upload" type="file" name="file-upload"> 
-                        <button type="submit" name="uploadBtn">UPLOAD</button>   
-                    </form>     
-                </div> -->
-        <div class="card-type-update div-btn-create-file">
+        
+        <!-- <div class="card-type-update div-btn-create-file">
             <label for="file-upload">
                 <div class="div-icon-type-update btn-create-file">
                     <img class="icon-type-update" src="assets/icon-create.png" alt="create icon">
@@ -164,7 +153,7 @@
                 <input class="input-file-disable" id="file-upload" type="file" name="file-upload">
                 <button type="submit" name="uploadBtn">UPLOAD</button>
             </form>
-        </div>
+        </div> -->
     </div>
     <div class='content-individual-document'>
         <div class='div-icon-close-right'>

@@ -734,3 +734,12 @@ body{
     justify-content: right;
     margin-right: 30px;
 }
+
+.renameFileClass{
+    display: none;
+}
+
+.renameFileClass-show{
+    border: 1px solid grey;
+    border-radius: 4px;
+}
