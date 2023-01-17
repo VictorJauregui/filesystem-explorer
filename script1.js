@@ -167,8 +167,7 @@ function openCard(event) {
       dateModification.innerHTML = data.dateModification;
       extension.innerHTML = data.extension;
       size.innerHTML = data.size;
-
-
+      
     })
     .catch((err) => console.log("Request: ", err));
 
