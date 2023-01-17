@@ -137,10 +137,8 @@ body{
 
 .div-btn-create-file{
     display: flex;
-    flex-direction: column;
     width: 100%;
     justify-content: right;
-    background-color: blue;
 
 }
 
@@ -369,8 +367,6 @@ body{
 .div-icon-type-update{
     border-bottom: 1px solid white;
     padding-bottom: 10px;
-    display: flex;
-    justify-content: right;
 }
 
 
@@ -629,14 +625,11 @@ body{
 
 
 .form-disable-file{
-    background-color: red;
-    display: flex;
-    justify-content: right;
+    display: none;
 }
 
 .form-disable-file-show{
-    display: block;
-    
+    width: 100%;
 }
 
 .form-disable-file-show button{
@@ -741,4 +734,3 @@ body{
     justify-content: right;
     margin-right: 30px;
 }
-

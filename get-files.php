@@ -1,17 +1,26 @@
- <?php
+<?php
 
 
 
+    if (isset($_SESSION['current_path'])) {
+        $currPath = $_SESSION['current_path'];
+        getFile($currPath);
+    } else {
+        getFile();
+    }
 
 
-function getFile($path = "./root"){
-    $everything = glob("$path/*");
-echo $path;
-    foreach($everything as $eachElement){
-        if(is_file($eachElement)) {
-            $file = preg_replace('/\.[^.\s]{3,4}$/', '', basename($eachElement));
-        
-            echo "
+    function getFile($path = "./root")
+    {
+        $everything = glob("$path/*");
+        $route = preg_replace('/\.[^.\s]{3,4}$/', '', basename($path));
+        echo "<h1 class='h1-tittle-folder'>$route</h1>
+            <div class='every-type-documents'>";
+        foreach ($everything as $eachElement) {
+            if (is_file($eachElement)) {
+                $file = preg_replace('/\.[^.\s]{3,4}$/', '', basename($eachElement));
+
+                echo "
                 <div class='card-document'>
                     <div class='div-icon-card'>
                         <img class='icon-card' src='assets/png.png' alt='icon power point'>
@@ -23,18 +32,6 @@ echo $path;
                         <img class='icon-down-card icon-delete' name='$file' path='$eachElement' onclick='changeCurrentPath(event)' src='assets/icon-waste.png' alt='icon-delete'>
                      </div>
                 </div>";
-                
-            
-        } 
+            }
         }
-
-}
-
-session_start();
-    $currPath = $_SESSION["current_path"];
-
-if(isset($_SESSION["current_path"])){
-    getFile($currPath);
-} else {
-    getFile();
-}
+    }

@@ -23,6 +23,7 @@ const iconCard = document.querySelector(".icon-card");
 const xCloseRightPart = document.querySelector(".icon-close-right-part");
 const allCards = document.querySelector(".every-type-documents");
 const cardFile = document.querySelector(".card-file");
+const formDisable = document.querySelector(".form-disable-file");
 const btnCreateDirectory = document.querySelector(".button-primary");
 const iconDirectory = document.querySelector(".icon-type");
 const formDirectory = document.querySelector("#create-directory-form");
@@ -33,19 +34,27 @@ const closeOpenCard = document.querySelectorAll(".div-icon-close-right");
 const deleteFile = document.querySelectorAll(".icon-delete");
 const modalDelete = document.querySelector(".modal-delete");
 const openFolderSidebar = document.querySelectorAll(".div-type-sidebar");
+const openFolderDocuments = document.querySelectorAll(".div-type-documents");
 const titleFolder = document.querySelector(".h1-tittle-folder");
 const titleFile = document.querySelector("#title-file");
 const dateCreation = document.querySelector("#date-creation");
 const dateModification = document.querySelector("#date-modification");
 const createSubfolder = document.querySelector(".modal2-subFolder");
 const btnSubFolder = document.querySelector("#btn-subFolder");
+const extension = document.querySelector("#extension");
+const size = document.querySelector("#size");
 
 /* EVENTS */
 
 xClose2.addEventListener("click", closeWindows2);
+// documents.addEventListener("click", openDocuments);
+// images.addEventListener("click", openImages);
+// audioVideo.addEventListener("click", openAudioVideo);
 buttonCreate.addEventListener("click", create);
 xClose.addEventListener("click", closeWindows);
 createDirectory.addEventListener("click", directoryCreate);
+
+// xCloseRightPart.addEventListener("click", closeRightPart);
 cardFile.addEventListener("click", openFile);
 formDirectory.addEventListener("submit", createADirectory);
 formFile.addEventListener("submit", createAFile);
@@ -64,6 +73,9 @@ for (let i = 0; i < closeOpenCard.length; i++) {
 
 for (let i = 0; i < openFolderSidebar.length; i++) {
   openFolderSidebar[i].addEventListener("click", openFolder);
+}
+for (let i = 0; i < openFolderDocuments.length; i++) {
+  openFolderDocuments[i].addEventListener("click", openFolder);
 }
 
 btnSubFolder.addEventListener("click", createNewSubFolder);
@@ -153,6 +165,10 @@ function openCard(event) {
       titleFile.innerHTML = data.fileName;
       dateCreation.innerHTML = data.dateCreation;
       dateModification.innerHTML = data.dateModification;
+      extension.innerHTML = data.extension;
+      size.innerHTML = data.size;
+
+
     })
     .catch((err) => console.log("Request: ", err));
 
@@ -200,9 +216,9 @@ function closeRightPart() {
 
 function openFile() {
   console.log("hola");
-  if (formFile.classList.contains("form-disable-file")) {
+  if (formDisable.classList.contains("form-disable-file")) {
     setInterval(() => {
-      formFile.classList.replace(
+      formDisable.classList.replace(
         "form-disable-file",
         "form-disable-file-show"
       );
@@ -401,35 +417,37 @@ function openEye(event) {
 }
 
 function openFolder(e) {
-  let nameFolder;
-
-  if (e.target.matches(".div-type-sidebar")) {
-    nameFolder = e.target.children[1].innerText;
-    titleFolder.innerHTML = nameFolder;
-  } else if (e.target.matches(".icon-type")) {
-    nameFolder = e.target.nextElementSibling.innerText;
-    titleFolder.innerHTML = nameFolder;
-  } else if (e.target.matches(".h2-title-sidebar")) {
-    nameFolder = e.target.innerText;
-    titleFolder.innerHTML = nameFolder;
-  }
+  //   let nameFolder;
+  titleFolder.innerText = e.target.parentElement.children[1].innerText;
+  //   if (e.target.matches(".div-type-sidebar")) {
+  //     nameFolder = e.target.children[1].innerText;
+  //     titleFolder.innerHTML = nameFolder;
+  //   } else if (e.target.matches(".icon-type")) {
+  //     nameFolder = e.target.nextElementSibling.innerText;
+  //     titleFolder.innerHTML = nameFolder;
+  //   } else if (e.target.matches(".h2-title-sidebar")) {
+  //     nameFolder = e.target.innerText;
+  //     titleFolder.innerHTML = nameFolder;
+  //   }
 }
 
 function navigate(event) {
   if (
     event.target.matches(".div-type-documents") ||
-    event.target.matches(".div-type-sidebar")
+    event.target.matches(".div-type-sidebar") ||
+    event.target.matches(".h2-title-sidebar") ||
+    event.target.matches(".text-type-document")
   ) {
     let path = event.target.getAttribute("routeId");
     console.log(path);
-  //   fetch(`./navigate.php?directoryPath=${path}`, {
-  //     method: "GET",
-  //   })
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //       window.location.href = "./index.php";
-  //     });
-  // }
-  window.location.href = `./navigate.php?directoryPath=${path}`}
+    fetch(`./navigate.php?directoryPath=${path}`, {
+      method: "GET",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        window.location.href = "./index.php";
+      });
+  }
+  //   window.location.href = `./navigate.php?directoryPath=${path}`}
 }

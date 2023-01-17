@@ -1,3 +1,5 @@
+
+
 <?php
 
 $name= $_FILES["file-upload"]["name"];
@@ -54,4 +56,3 @@ if (strpos($name, 'jpeg') || strpos($name, 'png') || strpos($name, 'svg') !== fa
 
 
 ?>
-
