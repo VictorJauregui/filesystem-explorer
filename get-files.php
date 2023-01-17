@@ -32,7 +32,7 @@
                         <img class='icon-down-card icon-delete' name='$file' path='$eachElement' onclick='changeCurrentPath(event)' src='assets/icon-waste.png' alt='icon-delete'>
                         <img class='icon-down-card icon-rename' name='$file' path='$eachElement' onclick='renameFile(event)' src='assets/lapiz.png' alt='icon-lapiz'>
                      </div>
-                     <input id='renameFile' class='renameFileClass' path='$eachElement'></input>
+                     <input id='renameFile' class='renameFileClass' path='$eachElement' placeholder='change tittle'></input>
                 </div>";
             }
 

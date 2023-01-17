@@ -44,6 +44,8 @@ const btnSubFolder = document.querySelector("#btn-subFolder");
 const extension = document.querySelector("#extension");
 const size = document.querySelector("#size");
 const renameFileInput = document.querySelectorAll('#renameFile');
+const closeDeleteModal = document.querySelector(".close-modal-delete");
+const ButtonCancelDelete = document.querySelector(".btn-cancel");
 
 
 /* EVENTS */
@@ -60,6 +62,8 @@ createDirectory.addEventListener("click", directoryCreate);
 cardFile.addEventListener("click", openFile);
 formDirectory.addEventListener("submit", createADirectory);
 formFile.addEventListener("submit", createAFile);
+closeDeleteModal.addEventListener("click", closeModalDel)
+ButtonCancelDelete.addEventListener("click", cancelDelete);
 
 for (let i = 0; i < createSubFolder.length; i++) {
   createSubFolder[i].addEventListener("click", subFolder);
@@ -308,9 +312,6 @@ function createAFile(e) {
         iconEye.setAttribute("src", "assets/icon-eye.png");
         iconEye.classList = "icon-down-card";
 
-        const iconRename = document.createElement("img");
-        iconRename.setAttribute("src", "assets/lapiz.png")
-        iconRename.classList = "icon-down-card"
 
         const iconDelete = document.createElement("img");
         iconDelete.setAttribute("src", "assets/icon-waste.png");
@@ -318,6 +319,9 @@ function createAFile(e) {
         iconDelete.setAttribute("path", data.path);
         iconDelete.addEventListener("click", changeCurrentPath);
 
+        const inputDown = document.createElement("input");
+        inputDown.classList = "renameFileClass";
+        inputDown.style.placeHolder = "Change tittle"
         
 
         allCards.appendChild(cardNew);
@@ -328,7 +332,7 @@ function createAFile(e) {
         divDownCard.appendChild(iconInformation);
         divDownCard.appendChild(iconEye);
         divDownCard.appendChild(iconDelete);
-        divDownCard.appendChild(iconRename);
+        cardNew.appendChild(inputDown);
       }
     })
     .catch((err) => console.log("Request: ", err));
@@ -474,3 +478,16 @@ function renameFile(event){
     .catch((err) => console.log("Request: ", err));
     //window.location.href = ./navigate.php?path=${path}
     }
+
+  function closeModalDel(){
+    if (modalDelete.classList.contains("modal-delete-show")) {
+      modalDelete.classList.replace("modal-delete-show", "modal-delete");
+    }
+  }
+
+  function cancelDelete () {
+    console.log("HOLA")
+    if (modalDelete.classList.contains("modal-delete-show")) {
+      modalDelete.classList.replace("modal-delete-show", "modal-delete");
+    }
+  }

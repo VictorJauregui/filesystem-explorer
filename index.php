@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script1.js?v=<?php echo time(); ?>" defer></script>
 
     <style>
@@ -88,13 +88,13 @@
     <div class="modal-delete">
         <div class="contenido-modal-delete">
             <div class="div-icon-close close-modal2">
-                <img class="icon-close icon-close2" src="assets/icon-close.png" alt="icon close">
+                <img class="icon-close icon-close2 close-modal-delete" src="assets/icon-close.png" alt="icon close">
             </div>
             <div class="top-contenido-delete">
                 <h2 class="h2-modal-delete">Are you sure that you want to delete this file?</h2>
             </div>
             <div class="btns-delete">
-                <button class="button-secundary">CANCEL</button>
+                <button class="button-secundary btn-cancel">CANCEL</button>
                 <button onclick="openDelete(event)" class="btn-delete">DELETE</button>
             </div>
 
@@ -165,11 +165,11 @@
                 <p id="title-file"></p>
             </div>
             <div class='div-individual-content'>
-                <h2>CREATION DATE</h2>
+                <h2>LAST MODIFIED DATE</h2>
                 <p id="date-creation"></p>
             </div>
             <div class='div-individual-content'>
-                <h2>LAST MODIFIED DATE</h2>
+                <h2>CREATION DATE</h2>
                 <p id="date-modification"></p>
             </div>
             <div class='div-individual-content'>
