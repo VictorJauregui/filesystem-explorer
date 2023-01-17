@@ -313,6 +313,8 @@ function createAFile(e) {
         iconDelete.setAttribute("path", data.path);
         iconDelete.addEventListener("click", changeCurrentPath);
 
+        const inputRename = document.createElement("input");
+
         allCards.appendChild(cardNew);
         cardNew.appendChild(divIconFile);
         divIconFile.appendChild(iconFile);
@@ -321,6 +323,7 @@ function createAFile(e) {
         divDownCard.appendChild(iconInformation);
         divDownCard.appendChild(iconEye);
         divDownCard.appendChild(iconDelete);
+        cardNew.appendChild(inputRename);
       }
     })
     .catch((err) => console.log("Request: ", err));
@@ -457,8 +460,8 @@ function navigate(event) {
 }
 
 function renameFile(event){
-    const path = event.target.getAttribute('path')
-    const inputvalue= event.target.value
+    const path = event.target.getAttribute('path');
+    const inputvalue= event.target.value;
    // console.log(inputvalue)
 
     fetch(`./rename.php?path=${path}&inputValue=${inputvalue}`, { 

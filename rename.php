@@ -1,13 +1,13 @@
 <?php
-$renameFile = $_GET['path'];
-$inputValue = $_GET['inputValue'];
+$renameFile = $_REQUEST['path'];
+$inputValue = $_REQUEST['inputValue'];
 
 $explodePath =  explode('/', $renameFile);
 $explodePath[count($explodePath) - 1] = $inputValue;
 
 $newPath = implode('/', $explodePath);
 
-if (is_dir($renameFile)) {
+if (is_file($renameFile)) {
     rename($renameFile, $newPath);
     echo json_encode(["newPath" => $newPath]);
 } else {

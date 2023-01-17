@@ -10,7 +10,7 @@
     }
 
 
-    function getFile($path = "./root")
+    function getFile($path = "./root/")
     {
         $everything = glob("$path/*");
         $route = preg_replace('/\.[^.\s]{3,4}$/', '', basename($path));
@@ -31,7 +31,7 @@
                         <img class='icon-down-card icon-eye' name='$file' path='$eachElement'  onclick='openEye(event)' src='assets/icon-eye.png' alt=''>
                         <img class='icon-down-card icon-delete' name='$file' path='$eachElement' onclick='changeCurrentPath(event)' src='assets/icon-waste.png' alt='icon-delete'>
                      </div>
-                     <input id='renameFile'path='$eachElement'></input>
+                     <input id='renameFile' path='$eachElement'></input>
                 </div>";
             }
 

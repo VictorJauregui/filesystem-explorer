@@ -5,7 +5,7 @@
 
 
 
-function getFilesAndFolders($path = "./root")
+function getFilesAndFolders($path = "./root/")
 {
     $everything = glob("$path/*");
     foreach ($everything as $eachElement) {
