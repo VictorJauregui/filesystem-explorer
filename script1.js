@@ -43,6 +43,7 @@ const createSubfolder = document.querySelector(".modal2-subFolder");
 const btnSubFolder = document.querySelector("#btn-subFolder");
 const extension = document.querySelector("#extension");
 const size = document.querySelector("#size");
+const renameFileInput= document.querySelectorAll('#renameFile');
 
 /* EVENTS */
 
@@ -76,6 +77,10 @@ for (let i = 0; i < openFolderSidebar.length; i++) {
 }
 for (let i = 0; i < openFolderDocuments.length; i++) {
   openFolderDocuments[i].addEventListener("click", openFolder);
+}
+
+for (let i = 0; i < renameFileInput.length; i++){
+    renameFileInput[i].addEventListener("click", renameFile)
 }
 
 btnSubFolder.addEventListener("click", createNewSubFolder);
@@ -167,7 +172,7 @@ function openCard(event) {
       dateModification.innerHTML = data.dateModification;
       extension.innerHTML = data.extension;
       size.innerHTML = data.size;
-      
+
     })
     .catch((err) => console.log("Request: ", err));
 
@@ -450,3 +455,22 @@ function navigate(event) {
   }
   //   window.location.href = `./navigate.php?directoryPath=${path}`}
 }
+
+function renameFile(event){
+    const path = event.target.getAttribute('path')
+    const inputvalue= event.target.value
+   // console.log(inputvalue)
+
+    fetch(`./rename.php?path=${path}&inputValue=${inputvalue}`, { 
+      method: "GET",
+    })
+    
+    .then((res)=>{res.json()})
+    .then((data)=>{
+    if (data){console.log(data)}
+     window.location.href="index.php";
+    //reloadThePage()
+    })
+    .catch((err) => console.log("Request: ", err));
+    //window.location.href = ./navigate.php?path=${path}
+    }
