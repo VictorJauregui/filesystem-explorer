@@ -43,8 +43,7 @@ const createSubfolder = document.querySelector(".modal2-subFolder");
 const btnSubFolder = document.querySelector("#btn-subFolder");
 const extension = document.querySelector("#extension");
 const size = document.querySelector("#size");
-const renameFileInput = document.querySelectorAll('#renameFile');
-
+const renameFileInput= document.querySelectorAll('#renameFile');
 
 /* EVENTS */
 
@@ -308,10 +307,6 @@ function createAFile(e) {
         iconEye.setAttribute("src", "assets/icon-eye.png");
         iconEye.classList = "icon-down-card";
 
-        const iconRename = document.createElement("img");
-        iconRename.setAttribute("src", "assets/lapiz.png")
-        iconRename.classList = "icon-down-card"
-
         const iconDelete = document.createElement("img");
         iconDelete.setAttribute("src", "assets/icon-waste.png");
         iconDelete.classList = "icon-down-card";
@@ -328,8 +323,6 @@ function createAFile(e) {
         divDownCard.appendChild(iconInformation);
         divDownCard.appendChild(iconEye);
         divDownCard.appendChild(iconDelete);
-        divDownCard.appendChild(iconRename);
-
       }
     })
     .catch((err) => console.log("Request: ", err));
@@ -466,15 +459,8 @@ function navigate(event) {
 }
 
 function renameFile(event){
-    console.log("Hola");
-    
-    if(renameFileInput.classList.contains("renameFileClass")){
-        renameFileInput.classList.replace("renameFileClass", "renameFileClass-show")
-       }
-
-
-    const path = event.target.getAttribute('path');
-    const inputvalue= event.target.value;
+    const path = event.target.getAttribute('path')
+    const inputvalue= event.target.value
    // console.log(inputvalue)
 
     fetch(`./rename.php?path=${path}&inputValue=${inputvalue}`, { 
