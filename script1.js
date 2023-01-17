@@ -259,7 +259,7 @@ function createADirectory(e){
      let fileName = e.target.elements["file-upload"].files[0].name;
      console.log(fileName);
 
-     fetch(`./create-file.php?filename=${fileName}`,{
+     fetch(`./get-files.php?filename=${fileName}`,{
      method:"GET",
      })
 
@@ -360,7 +360,7 @@ let searchBtnn=document.querySelector("#keywords").value;
 searchBtnn=searchBtnn.toLowerCase();
 
 
-fetch(`./search.php?filename=${searchBtnn}`,{
+fetch(`./search.php?file-name=${searchBtnn}`,{
     method:"GET",
     })
 
@@ -375,51 +375,18 @@ fetch(`./search.php?filename=${searchBtnn}`,{
         
         let filteredFolders = folders.filter((folder)=> folder.includes(searchBtnn))
         console.log(filteredFolders)
+        
 
-         
-
-           
-            const cardNew = document.createElement("div")
-            cardNew.classList = "card-document";
-
-
-            const divIconFile = document.createElement("div")
-            divIconFile.classList = "div-icon-card";
-
-            const iconFile = document.createElement("img");
-            iconFile.classList = "icon-card";
-            iconFile.setAttribute("src", "assets/png.png");
-
-           
-            const pFile = document.createElement("p");
-            pFile.textContent = data.name;
-
-            const divDownCard = document.createElement("div");
-            divDownCard.classList = "div-down-card"
-
-            const iconInformation = document.createElement("img");
-            iconInformation.setAttribute("src", "assets/icon-information.png");
-            iconInformation.classList = "icon-down-card"
-
-            const iconEye = document.createElement("img");
-            iconEye.setAttribute("src", "assets/icon-eye.png");
-            iconEye.classList = "icon-down-card"
-
-            const iconDelete = document.createElement("img");
-            iconDelete.setAttribute("src", "assets/icon-waste.png");
-            iconDelete.classList = "icon-down-card"
-
-            allCards.appendChild(cardNew);
-            cardNew.appendChild(divIconFile);
-            divIconFile.appendChild(iconFile);
-            cardNew.appendChild(pFile);
-            cardNew.appendChild(divDownCard);
-            divDownCard.appendChild(iconInformation);
-            divDownCard.appendChild(iconEye);
-            divDownCard.appendChild(iconDelete);
-            
-
-
+      
         })}
+
+        // function searchedFiles(){
+
+        //     let fileName = target.elements["file-upload"].files[0].name;
+        //     fetch("./all*searched-files.php?searched"{fileName}){
+        //     method:"REQUEST",
+        // })
+    
+        // }
                                                 
         

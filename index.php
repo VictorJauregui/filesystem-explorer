@@ -92,6 +92,10 @@ require_once("./search.php");
         
     </div>
     <div class="all-screen">
+        <?php
+
+require_once("./all-search-files.php");
+?>
         <div class="sidebar">
             <div class="div-btn-create">
                 <div class="btn-create">

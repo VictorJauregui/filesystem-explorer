@@ -1,7 +1,7 @@
 <?php
 $folderArr=[];
 $fileArr=[];
-$currentFile=$_GET["filename"];
+$currentFile=$_REQUEST["file-name"];
 function search_files( $dir , $files )
 {
     if (is_dir($dir))
@@ -41,7 +41,7 @@ search_files("./root",$currentFile);
  echo json_encode([
     "folders"=>$folderArr,
     "files"=>$fileArr,
-
+    "okay"=>true
 ]);
 // $files = array();
 // search_files("./root/", $files );
