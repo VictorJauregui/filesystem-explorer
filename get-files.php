@@ -1,8 +1,12 @@
  <?php
 
+
+
+
+
 function getFile($path = "./root"){
     $everything = glob("$path/*");
-
+echo $path;
     foreach($everything as $eachElement){
         if(is_file($eachElement)) {
             $file = preg_replace('/\.[^.\s]{3,4}$/', '', basename($eachElement));
@@ -26,6 +30,11 @@ function getFile($path = "./root"){
 
 }
 
+session_start();
+    $currPath = $_SESSION["current_path"];
 
-
-getFile(); 
+if(isset($_SESSION["current_path"])){
+    getFile($currPath);
+} else {
+    getFile();
+}

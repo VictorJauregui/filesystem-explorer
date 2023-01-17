@@ -189,6 +189,15 @@ body{
     margin-right: 30px;
 }
 
+
+
+.div-down-arrow{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-right: 30px;
+}
+
 .down-arrow {
     width: 15px;
     height: 15px;
@@ -198,6 +207,8 @@ body{
     display: flex;
     align-items: center;
     margin-left: 50px;
+    width: 86%;
+
 }
 
 .icon-type-documents{
@@ -698,10 +709,29 @@ body{
     transition: 0.5s;
 }
 
+
+
 .create-sub-folder:hover{
     width: 25px;
     height: 25px;
 }
 
+.create-sub-folder-small{
+    width: 15px;
+    height: 15px;
+    transition: 0.5s;
+}    
 
+.create-sub-folder-small:hover{
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+}
+
+.div-sub-folder-small{
+    width: 83%;
+    display: flex;
+    justify-content: right;
+    margin-right: 30px;
+}
 
