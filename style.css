@@ -88,9 +88,41 @@ body{
     cursor: pointer;
     margin-top: 40px;
     transition: 0.5s;
+    margin-bottom: 40px;
 
 }
+
+.btn-create-file{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    justify-content: center;
+    width: fit-content;
+    padding: 0px 30px;
+    height: 3rem;
+    background-color: white;
+    border-radius: 30px;
+    color: #35C4FE;
+    border: 1px solid #35C4FE;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: 0.5s;
+    margin-bottom: 40px;
+    margin-right: 100px;
+
+
+}
+
+
 .btn-create:hover{
+    background-color: #8BD5FF;
+    color: white;
+    padding: 0px 40px;
+    border: 1px solid white;
+
+}
+
+.btn-create-file:hover{
     background-color: #8BD5FF;
     color: white;
     padding: 0px 40px;
@@ -103,7 +135,20 @@ body{
     justify-content: center;
 }
 
+.div-btn-create-file{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+
+}
+
 .btn-create img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.btn-create-file img {
     width: 30px;
     height: 30px;
     margin-right: 10px;
@@ -119,11 +164,10 @@ body{
 
 }
 
-.div-type-sidebar:hover{
-    background-color: #8BD5FF;
-    margin-left: 10px;
-    margin-right: 10px;
 
+
+.div-type-sidebar:hover{
+    background-color: #b9e4fc;
 }
 
 .div-type-sidebar1{
@@ -145,6 +189,15 @@ body{
     margin-right: 30px;
 }
 
+
+
+.div-down-arrow{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-right: 30px;
+}
+
 .down-arrow {
     width: 15px;
     height: 15px;
@@ -154,6 +207,8 @@ body{
     display: flex;
     align-items: center;
     margin-left: 50px;
+    width: 86%;
+
 }
 
 .icon-type-documents{
@@ -207,19 +262,21 @@ body{
 }
 
 .card-document{
-    background-color: white;
     padding: 10px 10px 0 10px;
-    height: 20vh;
+    height: 31vh;
     border-radius: 20px;
+    background-color: white;
     border: 1px solid #DBDBDB;
     justify-content: space-between;
     margin: 50px 50px 0 0;
     cursor: pointer;
     transition: 0.5s;
+    text-align: center;
+    
 }
 
 .card-document:hover {
-    padding: 15px;
+    padding: 7px;
     box-shadow: 2px 2px 5px #999;
 }
 
@@ -330,6 +387,10 @@ body{
     display: none;
 }
 
+.modal2-subFolder {
+    display: none;
+}
+
 .modal2-show{
     position: fixed;
     z-index: 2;
@@ -340,6 +401,32 @@ body{
     justify-content: center;
 }
 
+.modal2-show-subFolder{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.529);
+    display: flex;
+    justify-content: center;
+}
+
+.modal-delete{
+    display: none;
+}
+
+.modal-delete-show{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.413);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .contenido-modal2{
     width: 20%;
     height: 160px;
@@ -348,12 +435,62 @@ body{
     border-radius: 20px;
 }
 
+.contenido-modal2-subFolder{
+    width: 20%;
+    height: 160px;
+    margin-top: 300px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.contenido-modal-delete{
+    width: 20%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.h2-modal-delete{
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btns-delete{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin: 20px 0;
+}
+
+.btn-delete{
+    width: 25%;
+    height: 2rem;
+    margin-left: 10px;
+    color: #ffffff;
+    background-color: #FF5F5F;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-delete:hover{
+    border: 1px solid rgb(251, 96, 96);
+    box-shadow: 2px 2px 5px #999;
+
+}
 
 .h2-modal2{
     width: 100%;
     margin: 0 auto;
     text-align: center;
 }
+
+.h2-modal2-subFolder{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+} 
 
 .input-directory{
     width: 80%;
@@ -374,6 +511,10 @@ body{
     margin-top: 15px;
 }
 
+.close-modal2-subFolder{
+    margin-top: 15px;
+}
+
 .icon-close2{
     margin-right: 15px;
     width: 10px;
@@ -381,6 +522,11 @@ body{
 }
 
 .buttons-modal2{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-modal2-subFolder{
     display: flex;
     justify-content: center;
 }
@@ -527,4 +673,82 @@ body{
     width: 1%;
     height: 1%;
     margin: 5px 10px;
+}
+
+.div-down-card{
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon-down-card{
+    width: 10%;
+}
+
+.icon-information:hover{
+    background-color:  rgba(0, 183, 0, 0.535);
+    border-radius: 10000px;
+    padding: 5px;
+}
+
+.icon-eye:hover{
+    background-color:  rgba(255, 166, 0, 0.508);
+    border-radius: 10000px;
+    padding: 5px;
+}
+
+.icon-delete:hover{
+
+    background-color: rgba(255, 0, 0, 0.421);
+    border-radius: 10000px;
+    padding: 5px;
+}
+
+.create-sub-folder{
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+}
+
+
+
+.create-sub-folder:hover{
+    width: 25px;
+    height: 25px;
+}
+
+.create-sub-folder-small{
+    width: 15px;
+    height: 15px;
+    transition: 0.5s;
+}    
+
+.create-sub-folder-small:hover{
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+}
+
+.div-sub-folder-small{
+    width: 83%;
+    display: flex;
+    justify-content: right;
+    margin-right: 30px;
+}
+
+.renameFileClass{
+    background-color: #cbcccd89;
+    border-radius: 5px;
+    border: 0.5px solid rgb(183, 183, 183);
+    text-align: center;
+    margin-top:3px;
+    margin-bottom: 3px;
+}
+
+/* .renameFileClass-show{
+    border: 1px solid grey;
+    border-radius: 4px;
+} */
+
+.icon-rename{
+    display: none;
 }
