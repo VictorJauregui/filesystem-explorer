@@ -13,7 +13,7 @@ body{
 .nav-bar {
     background-color: #5B5B5B;
     display: flex;
-    align-items: center;
+   
     height: 8vh;
 }
 
@@ -527,4 +527,90 @@ body{
     width: 1%;
     height: 1%;
     margin: 5px 10px;
+<<<<<<< HEAD:style1.css
+=======
+}
+
+.div-down-card{
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon-down-card{
+    width: 10%;
+}
+
+.icon-information:hover{
+    background-color:  rgba(0, 183, 0, 0.535);
+    border-radius: 10000px;
+    padding: 5px;
+}
+
+.icon-eye:hover{
+    background-color:  rgba(255, 166, 0, 0.508);
+    border-radius: 10000px;
+    padding: 5px;
+}
+
+.icon-delete:hover{
+
+    background-color: rgba(255, 0, 0, 0.421);
+    border-radius: 10000px;
+    padding: 5px;
+}
+
+.create-sub-folder{
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+}
+
+
+
+.create-sub-folder:hover{
+    width: 25px;
+    height: 25px;
+}
+
+<<<<<<< HEAD
+#search{
+    display: block;
+=======
+.create-sub-folder-small{
+    width: 15px;
+    height: 15px;
+    transition: 0.5s;
+}    
+
+.create-sub-folder-small:hover{
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+>>>>>>> 8e59a9b0b2e747b3bab4c7a43134c0a431e9d44c
+}
+
+.div-sub-folder-small{
+    width: 83%;
+    display: flex;
+    justify-content: right;
+    margin-right: 30px;
+}
+
+.renameFileClass{
+    background-color: #cbcccd89;
+    border-radius: 5px;
+    border: 0.5px solid rgb(183, 183, 183);
+    text-align: center;
+    margin-top:3px;
+    margin-bottom: 3px;
+}
+
+/* .renameFileClass-show{
+    border: 1px solid grey;
+    border-radius: 4px;
+} */
+
+.icon-rename{
+    display: none;
+>>>>>>> giorgi:style.css
 }
