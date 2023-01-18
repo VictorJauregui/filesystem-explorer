@@ -79,7 +79,7 @@
             </div>
             <input class="input-directory" type="text" name="name-directory" id="input-subFolder">
             <div class="buttons-modal2-subFolder">
-                <button class="button-secundary">BACK</button>
+                <button class="button-secundary btn-close-modal-sub-folder">BACK</button>
                 <button type="submit" class="button-primary" id="btn-subFolder">CREATE</button>
             </div>
         </div>

@@ -46,6 +46,8 @@ const size = document.querySelector("#size");
 const renameFileInput = document.querySelectorAll('#renameFile');
 const closeDeleteModal = document.querySelector(".close-modal-delete");
 const ButtonCancelDelete = document.querySelector(".btn-cancel");
+const closeModalSubFolder = document.querySelector(".btn-close-modal-sub-folder");
+const xCloseSubfolder = document.querySelector(".close-modal2-subFolder")
 
 
 /* EVENTS */
@@ -64,6 +66,8 @@ formDirectory.addEventListener("submit", createADirectory);
 formFile.addEventListener("submit", createAFile);
 closeDeleteModal.addEventListener("click", closeModalDel)
 ButtonCancelDelete.addEventListener("click", cancelDelete);
+closeModalSubFolder.addEventListener("click", closeSubFolder);
+xCloseSubfolder.addEventListener("click", closeSubFolder);
 
 for (let i = 0; i < createSubFolder.length; i++) {
   createSubFolder[i].addEventListener("click", subFolder);
@@ -258,9 +262,21 @@ function createADirectory(e) {
         h2Directory.classList = "h2-title-sidebar";
         h2Directory.textContent = data.name;
 
+        const  divIconCreateDirectory = document.createElement("div");
+        divIconCreateDirectory.classList = "div-down-arrow";
+        
+
+        const iconCreateDIrectory = document.createElement("img");
+        iconCreateDIrectory.classList = "create-sub-folder";
+        iconCreateDIrectory.setAttribute("src", "assets/icon-create.png")
+        
+
         divDirectory.appendChild(iconDirectory);
         divDirectory.appendChild(h2Directory);
         allDocuments.appendChild(divDirectory);
+        divDirectory.appendChild(divIconCreateDirectory);
+        divIconCreateDirectory.appendChild(iconCreateDIrectory);
+
       }
     })
     .catch((err) => console.log("Request: ", err));
@@ -382,7 +398,6 @@ function createNewSubFolder(e) {
                <img class='icon-type-documents' src='assets/icon-subfolder.png' alt='icon power point'>
                 <p class='text-type-document'>${data.newDir}</p>
                 <div class='div-down-arrow'>
-                <img class='create-sub-folder create-sub-folder-small' path=${path} src='assets/icon-create.png' alt='arrow-down'>
             </div>
             `;
 
@@ -489,5 +504,11 @@ function renameFile(event){
     console.log("HOLA")
     if (modalDelete.classList.contains("modal-delete-show")) {
       modalDelete.classList.replace("modal-delete-show", "modal-delete");
+    }
+  }
+
+  function closeSubFolder(){
+    if (createSubfolder.classList.contains("modal2-show-subFolder")) {
+      createSubfolder.classList.replace("modal2-show-subFolder", "modal2-subFolder");
     }
   }
