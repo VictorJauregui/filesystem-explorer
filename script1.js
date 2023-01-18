@@ -350,3 +350,14 @@ function createADirectory(e){
     
 
 }
+const h2rename=document.querySelector(".h2-rename");
+const renamevalue=document.querySelector(".renombre");
+const rename=document.querySelector(".rename-bttn");
+rename.addEventListener("click",renameF);
+function renameF(){
+    fetch(`./rename.php?file-upload`,{
+        method:"GET",
+        })
+        renamevalue.value=h2rename.value;
+console.log(renamevalue);
+}

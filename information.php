@@ -1,6 +1,5 @@
 <?php
-
-$archivoName = $_REQUEST["file-upload"];
+$nameDirectory = $_REQUEST["foldername"];
 $newFileImage = "./root/". $archivoName;
 
 echo "<div class='content-individual-document'>
@@ -9,7 +8,11 @@ echo "<div class='content-individual-document'>
             </div>
             <div class='top-type-document'>
                 <div class='div-individual-content'>
-                    <h2>TITLE</h2>
+                <h2>TITLE</h2>
+                <form action='rename.php'>
+                <input type='text' class='h2-rename'>
+                      <button type='button' name='rename' class='rename-bttn'>Rename</button>
+</form>
                     <p>$newFileImage</p>
                 </div>   
                 <div class='div-individual-content'>
@@ -22,7 +25,7 @@ echo "<div class='content-individual-document'>
                 </div>  
                 <div class='div-individual-content'>
                     <h2>TYPE</h2>
-                    <div class='icon-and-name'>
+                    <div class='icon-and-name '>
                         <img class='icon-type-document' src='assets/word-color.png' alt='type of document'>
                         <p>Microsoft Word</p>
                     </div>
