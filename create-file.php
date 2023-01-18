@@ -2,7 +2,7 @@
 
 $nameFile = $_REQUEST["filename"];
 
-$root = "./root/david/" . $nameFile;
+$root = "./root/all/" . $nameFile;
 
 $old_umask = umask(0);
 
